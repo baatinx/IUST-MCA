@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<style type="text/css">
+		#bt1 {
+			background-color: #4CAF50;
+			color: white;
+			padding: 15px 32px;
+			border: 3px solid #4CAF50;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 4px;
+			margin-top: 10px;
+			transition-duration: .4s;
+		}
+		
+		#bt1:hover {
+			background-color: white;
+			color: #4CAF50;
+		}
+		
+		#p1 {
+			font: 16px;
+			font-family: comic sans ms;
+			font-weight: bold;
+			color: orangered;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function change() {
+			document.getElementById("p1").innerHTML = " inner html content has change";
+		}
+
+	</script>
+</head>
+
+<body>
+	<p id="p1">this page demonstrate how to change the inner content of any html tag </p>
+	<input type="button" id="bt1" value="click here" onclick="change()">
+
+	<div id="demo">
+	</div>
+
+</body>
+
+</html>

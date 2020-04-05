@@ -1,0 +1,29 @@
+// "out": "../css/mixins.css"
+
+.container {
+  display: block;
+  margin: auto;
+  border: 1px solid #ddd;
+  background-color: dodgerblue;
+  color: #f9f9f9;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.small_container {
+  .container;
+  width: 100px;
+  height: 100px;
+}
+
+.medium_container {
+  .container;
+  width: 200px;
+  height: 200px;
+}
+
+.big_container {
+  .container;
+  width: 300px;
+  height: 300px;
+}

@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		button {
+			background-color: red;
+		}
+		/*Beginning Substring Attribute Value Selector*/
+		
+		button[title^='inside_div_first'] {
+			border: 3px solid green;
+			color: red;
+			font: bold 15px comic sans ms;
+			margin: 200px;
+			background: white;
+			padding: 10px 20px;
+		}
+		/*Ending Substring Attribute Value Selector */
+		
+		button[title$='second_button'] {
+			box-shadow: 5px 5px 10px red;
+		}
+		/*	Arbitrary Substring Attribute Value Selector  */
+		
+		button[title*='di'] {
+			width: 400px;
+		}
+		/* Multiple Attribute Selectors*/
+		
+		button[title^='inside'][title*='div'][title$='button'] {
+			height: 200px;
+		}
+
+	</style>
+</head>
+
+
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<button title="inside_div_first_button">css 3 button</button>
+	<button title="inside_div_second_button"> css3 button</button>
+</body>
+
+</html>

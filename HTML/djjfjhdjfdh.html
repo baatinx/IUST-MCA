@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		hr {
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+		
+		progress {
+			width: 100%;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		
+		#p1 {
+			height: 5px;
+		}
+		
+		canvas {
+			border: 1px solid red;
+		}
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById("c1");
+			var context = canvas.getContext("2d")
+			var pic = document.getElementById("pic1")
+			context.drawImage(pic, 20, 40);
+		}
+
+	</script>
+</head>
+
+<body>
+	<img id="pic1" src="images/asc_logo.png" \>
+	<canvas id="c1"></canvas>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+	var a=null;
+		function set_p() {
+		a=setTimeout(print,3000);
+		}
+
+		function reset_p() {
+		clearTimeout(a);
+		}
+
+		function print() {
+			document.write("this page demonstrates the use of clear time out fuction");
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" value="set time out"      onclick="set_p();" \>
+	<input type="button" value="reset time out"    onclick="reset_p();" \>
+</body>
+
+</html>

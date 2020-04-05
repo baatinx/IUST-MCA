@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+
+	</style>
+
+	<script type="text/javascript">
+		var str1, res;
+		str1 = "apple, banana, kiwi"
+			/*
+			Extracting String Parts
+			There are 3 methods for extracting a part of a string:
+
+			1. slice(start, end) +ve,-ve start end
+			2. substring(start, end) +ve start end
+			3. substr(start, length) +ve,-ve start
+			*/
+
+		/*slice() extracts a part of a string and returns the extracted part in a new string.
+
+		The method takes 2 parameters: the starting index (position), and the ending index (position).
+
+		This example slices out a portion of a string from position 7 to position 13*/
+		res = str1.slice(7, 13);
+		alert(res);
+
+		/*
+		If a parameter is negative, the position is counted from the end of the string.
+
+		This example slices out a portion of a string from position -12 to position -6
+
+		*/
+		res = str1.slice(-4, -1);
+		alert(res);
+		//If you omit the second parameter, the method will slice out the rest of the string:
+		res = str1.slice(-4);
+		alert(res);
+		//Negative positions do not work in Internet Explorer 8 and earlier.
+
+	</script>
+</head>
+
+<body>
+	<p>apple, banana, kiwi</p>
+</body>
+
+</html>

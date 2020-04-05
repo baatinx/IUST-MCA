@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		function init() {
+			var a, b;
+			a = document.getElementById("a1");
+			b = a.getAttribute("href");
+			alert("href = " + b);
+			b = a.getAttribute("onfocus");
+			alert("onfoucs = " + b);
+		}
+
+	</script>
+</head>
+
+<body>
+	<a id="a1" href="google.in" target="_blank" onfocus="init();">get focus on this anchor </a>
+</body>
+
+</html>

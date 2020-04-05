@@ -1,0 +1,44 @@
+// "out": "../css/nesting.css"
+
+.big_wrapper {
+  border: 10px solid red;
+
+  .nav_container {
+    background-color: dodgerblue;
+
+    a {
+      color: white;
+      background-color: dodgerblue;
+    }
+  }
+
+  .aside_container {
+    background-color: #999;
+    display: inline-block;
+    width: 200px;
+
+    a {
+      display: block;
+      color: #666;
+    }
+  }
+
+  .main_container {
+    background-color: #eee;
+    display: inline-block;
+    width: auto;
+
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+
+  .footer_container {
+    background-color: #d9c71f;
+
+    a {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<style>
+			@media screen and (min-width:800px) {
+			.large_menu {
+				display: block;
+				border: none;
+				text-align: center;
+			}
+			.small_menu {
+				display: none;
+			}
+			ul {
+				display: inline-block;
+				border: none;
+				box-shadow: 2px 2px 10px #eee;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+				display: inline;
+				float: left;
+				margin: 0;
+				padding: 0;
+			}
+			a {
+				display: inline-block;
+				height: 50px;
+				padding: 10 20px;
+				line-height: 50px;
+				vertical-align: middle;
+				border: none;
+				text-decoration: none;
+				font: bold 20px agency fb;
+				color: royalblue;
+				background: #fcfcfc;
+				box-sizing: border-box;
+				transition: all .2s ease-out;
+			}
+			a:hover {
+				background: #f1f1f1;
+			}
+		}
+		
+		@media screen and (max-width: 799px) {
+			.small_menu {
+				display: inline-block;
+			}
+			.large_menu {
+				display: none;
+			}
+			.small_menu {
+				width: 200px;
+				height: 40px;
+				padding: 10 20px;
+				overflow: hidden;
+				float: left;
+			}
+			select {
+				width: 200px;
+				height: 40px;
+				padding: 5px;
+				font: bold 20px agency fb;
+				border: 1px solid silver;
+				color: grey;
+				box-shadow: 2px 2px 10px #eee;
+			}
+			option {
+				font: inherit;
+			}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<nav class="small_menu">
+		<select>
+			<option>home</option>
+			<option>admission</option>
+			<option>results</option>
+			<option>notification</option>
+			<option>about</option>
+			<option>contact us</option>
+			<option>site map</option>
+		</select>
+	</nav>
+
+
+	<nav class="large_menu">
+		<ul>
+			<li> <a href="#">home</a></li>
+			<li><a href="#">admission</a></li>
+			<li><a href="#">results</a></li>
+			<li><a href="#">notification</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">contact us</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">site map</a></li>
+		</ul>
+	</nav>
+</body>
+
+</html>

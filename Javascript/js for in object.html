@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+		/*using object literal*/
+
+		var x, y;
+		var person = {
+			name: "yawer",
+			age: 20
+		};
+
+		for (y in person) {
+			alert(y);
+			alert(person[y]);
+
+		}
+
+		function student(name, age, gender) {
+			this.name = name;
+			this.age = age;
+		}
+		var basit = new student("basit", 20);
+		for (x in basit) {
+			alert(x);
+			alert(basit[x]);
+		}
+	</script>
+</head>
+
+
+<body>
+	<p>java script for in loop</p>
+</body>
+
+</html>

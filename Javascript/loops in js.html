@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loop in java script</title>
+</head>
+<body>
+<font size="5 ">
+<tt>
+<script type="text/javascript">
+	var i,num,linebreak,hrow;
+	i=0;
+	num=3;
+	linebreak="<br \>";
+	hrow="<hr \>";
+	document.write("<font color=a1a1a1 size=6><center>this page demonstrates the use of <font color=00cc00 > while loop </font><font color=0066ff>do while loop </font>                  <font color=purple>  for loop</center></font> </font>")
+
+	document.write("<font color=00cc00>while loop</font>");
+	document.write(linebreak);
+	while ( i <= num)
+	{
+		document.write("current count = "+i +linebreak);
+		i++;
+	}
+	
+	i=0;
+	document.write(hrow);
+	document.write("<font color=0066ff>do while loop</font>")
+	document.write(linebreak);
+	do{
+		document.write("current count = "+i+linebreak);
+		i++;
+	}while(i<=num)
+	
+	i=0;
+	document.write(hrow);
+	document.write("<font color=purple>for loop</font>")
+	document.write(linebreak);
+	for (i = 0; i <= num; i++) 
+	     document.write("current count = "+i+linebreak);
+</script>
+</tt>
+</font>
+</body>
+</html>

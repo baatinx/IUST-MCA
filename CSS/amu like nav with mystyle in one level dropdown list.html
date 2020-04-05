@@ -1,0 +1,320 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: 0;
+		}
+		
+		header {
+			display: block;
+			border: none;
+			border-top: 5px solid #009E6C;
+			width: 100%;
+			height: auto;
+			position: relative;
+			box-shadow: 0 4px 10px #ddd;
+		}
+		
+		.top_line,
+		.bottom_line {
+			border: 1px solid silver;
+			border: none;
+			height: 60px;
+		}
+		
+		.top_line {
+			background-color: #f4f4f4;
+		}
+		
+		.inside_top_line {
+			display: block;
+			width: 1200px;
+			height: 60px;
+			margin: 0 auto;
+			overflow: auto;
+		}
+		
+		.search_panel {
+			display: inline-block;
+			border: 3px solid white;
+			borde: none;
+			width: auto;
+			float: right;
+			margin-top: 10px;
+		}
+		
+		.bt1,
+		.txt1 {
+			height: 30px;
+			float: left;
+		}
+		
+		.txt1 {
+			border: none;
+			width: 250px;
+			font-family: sans-serif;
+		}
+		
+		.bt1 {
+			border: none;
+			background-color: #ddd;
+			width: 40px;
+			background-image: url(images/search_box_icon.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: all .3s ease-out;
+		}
+		
+		.bt1:hover {
+			background-color: #009E6C;
+		}
+		
+		.bottom_line {
+			background-color: white;
+		}
+		
+		.inside_top_line,
+		.inside_bottom_line {
+			border: none;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.logo_container {
+			position: absolute;
+			top: -5px;
+			border: 1px solid red;
+			border: none;
+			height: 140px;
+			width: 150px;
+			background-image: url(images/forrst.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: 0 0 10px #333;
+		}
+		
+		nav {
+			display: inline-block;
+			border: 1px solid green;
+			border: none;
+			float: right;
+			height: 100%;
+			width: auto;
+		}
+		
+		.base_item {
+			display: inline-block;
+			position: relative;
+			border: 1px solid red;
+			border: none;
+			height: 60px;
+			width: auto;
+			transition: all .4s ease-out;
+		}
+		
+		.base_item:hover {
+			background: #f4f4f4;
+		}
+		
+		.base_item_anchor {
+			display: inline-block;
+			text-decoration: none;
+			font: bold 14px sans-serif;
+			color: #666;
+			height: 60px;
+			line-height: 56px;
+			vertical-align: middle;
+			text-transform: capitalize;
+			padding-left: 19px;
+			padding-right: 19px;
+			transition: all .2s ease-out;
+			border: 1px solid green;
+			border: none;
+			transition: all .2s ease-out;
+		}
+		
+		.base_item_anchor:hover {
+			color: #009E6C;
+		}
+		
+		.base_content_holder {
+			position: absolute;
+			top: 60px;
+			height: auto;
+			width: 200px;
+			background-color: white;
+			border: 1px solid silver;
+			display: none;
+			border: none;
+			box-shadow: 0 0 10px #333;
+		}
+		
+		.base_item:hover .base_content_holder {
+			display: block;
+		}
+		
+		.main_link {
+			position: relative;
+			text-decoration: none;
+			font: lighter 14px sans-serif;
+			display: block;
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+			border: 1px solid red;
+			border: none;
+			text-align: left;
+			color: #666;
+			text-transform: capitalize;
+			transition: all .4s ease-out;
+		}
+		
+		.main_link:hover {
+			background-color: #f1f1f1;
+			text-decoration: underline;
+		}
+		
+		.base_item_2 .base_content_holder {
+			width: 230px;
+		}
+		
+		.base_item_3 .base_content_holder {
+			width: 250px;
+		}
+		
+		.base_item_7 .base_content_holder {
+			width: 260px;
+		}
+		
+		.base_item_8 .base_content_holder {
+			width: 180px;
+		}
+		
+		.home_image_section {
+			display: block;
+			width: 100%;
+			height: auto;
+			border: none;
+			margin-top: 25px;
+		}
+		
+		.img_holder {
+			display: block;
+			width: 1100px;
+			height: auto;
+			margin: 0 auto;
+			border: 1px solid red;
+			border: none;
+		}
+		
+		.img_holder img {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<header>
+		<div class="top_line">
+			<div clasass="inside_top_line">
+				<div class="search_panel">
+					<input type="text" class="txt1" autofocus="on" spellcheck="false" placeholder=" Search here . . .">
+					<a href="#" class="bt1"></a>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_line">
+			<div class="inside_bottom_line">
+				<div class="logo_container"></div>
+				<nav>
+					<div class="base_item base_item_1">
+						<a href="#" class="base_item_anchor">home</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">vision</a>
+							<a href="#" class="main_link">mission</a>
+						</div>
+					</div>
+					<div class="base_item base_item_2">
+						<a href="#" class="base_item_anchor">adminstration</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">courses offered</a>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered</a>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered</a>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered<a>
+							<a href="#" class="main_link">mission</a>
+						</div>
+					</div>
+					<div class="base_item base_item_3">
+						<a href="#" class="base_item_anchor">academics</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">acadimic calender</a>
+							<a href="#" class="main_link">faculties</a>
+							<a href="#" class="main_link">departments</a>
+							<a href="#" class="main_link">distance learning</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+						</div>
+					</div>
+					<div class="base_item  base_item_4">
+						<a href="#" class="base_item_anchor">notification</a>
+					</div>
+					<div class="base_item  base_item_5">
+						<a href="#" class="base_item_anchor">Examination</a>
+					</div>
+					<div class="base_item  base_item_6">
+						<a href="#" class="base_item_anchor">results</a>
+					</div>
+					<div class="base_item  base_item_7">
+						<a href="#" class="base_item_anchor">services</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">grievances redressal cell</a>
+							<a href="#" class="main_link">hostel</a>
+							<a href="#" class="main_link">libarary</a>
+							<a href="#" class="main_link">medical services</a>
+							<a href="#" class="main_link">national cadet cops</a>
+							<a href="#" class="main_link">national service scheme</a>
+							<a href="#" class="main_link">welfare scheme</a>
+						</div>
+					</div>
+					<div class="base_item  base_item_8">
+						<a href="#" class="base_item_anchor">about us</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">founder</a>
+							<a href="#" class="main_link">principal</a>
+							<a href="#" class="main_link">facts</a>
+							<a href="#" class="main_link">history</a>
+							<a href="#" class="main_link">alumni</a>
+						</div>
+					</div>
+					<div class="base_item  base_item_9">
+						<a href="#" class="base_item_anchor">contact us</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<section class="home_image_section">
+		<div class="img_holder">
+			<img src="images/crew.jpg">
+		</div>
+	</section>
+</body>
+
+</html>

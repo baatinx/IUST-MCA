@@ -1,0 +1,23 @@
+<html>
+<head > 
+	<title > java script objects</title>
+	<script type="text/javascript">
+		function book(title,author)
+		{
+			this.title=title;
+			this.author=author;
+			
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">	
+	var obj =new book("Electornics","R.D sharma");
+		book.prototype.price=null;
+		obj.price=500;
+		document.write("book name is : "+obj.title+"<br \>");
+		document.write("book author is : "+obj.author+"<br \>");
+		document.write("book price is : "+ obj.price)
+	</script>
+	</body>
+</html>

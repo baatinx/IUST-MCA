@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>constructor function</title>
+<script type="text/javascript">
+	var func =new Function("x","y","var sum ; sum=1; sum=sum+(x*y); alert(sum);");
+
+/*	function nested_function()
+	{
+		var result;
+		result=func(3,4);
+		alert(result);
+	} */
+	
+</script>
+</head>
+<body>
+<input type="button" onclick="func(3,5)" value="click here"></input>
+</body>
+</html>

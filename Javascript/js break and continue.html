@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>break and continue</title>
+</head>
+<body>
+<font size="5">
+<tt>
+<script type="text/javascript">
+	var i,num,skip,linebreak,hrow; 
+	num=6;
+	skip=3;
+	linebreak="<br \>";
+	hrow="<hr \>";
+	document.write("<font color=c1c1c1><center>this page demonstrates the use of <font color=0066ff>continue </font>and <font color=00cc00>break </font>statements</center></font>");
+	document.write(linebreak);
+	document.write("<font color=0066ff>continue</font> ");
+	document.write(linebreak);
+	document.write(linebreak);
+	for(i=0;i<num;i++)
+	{
+		if(i==skip)
+			continue;
+		document.write("current count ="+i+linebreak);
+	}
+	i=0;
+	document.write(hrow);
+	document.write("<font color=00cc00>break</font>");
+	document.write(linebreak);
+	document.write(linebreak);
+	for(i=0;i<num;i++)
+	{
+		if(i==skip)
+			break;
+		document.write("current count ="+i+linebreak);
+	}
+
+	
+</script>
+
+</body>
+</html>

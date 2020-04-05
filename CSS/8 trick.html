@@ -1,0 +1,127 @@
+<html>
+
+<head>
+	<style type="text/css">
+		.fade,
+		.cc,
+		.grow,
+		.shrink,
+		.swig,
+		.inset {
+			transition: all .5s ease;
+			height: 70px;
+			width: 200px;
+			border: 1px solid silver;
+			font: bold 19px comic sans ms;
+			color: white;
+		}
+		
+		.fade {
+			opacity: 0.5;
+			background-color: royalblue;
+		}
+		
+		.fade:hover {
+			opacity: .9;
+		}
+		
+		.cc {
+			background-color: cornsilk;
+			color: black;
+		}
+		
+		.cc:hover {
+			background-color: orangered;
+			opacity: .9;
+		}
+		
+		.grow {
+			background-color: royalblue;
+			opacity: .9;
+		}
+		
+		.grow:hover {
+			transform: scale(1.1);
+		}
+		
+		.shrink {
+			background-color: dodgerblue;
+		}
+		
+		.shrink:hover {
+			transform: scale(0.9);
+		}
+		
+		.swig {
+			margin-left: 100px;
+			color: black;
+		}
+		
+		@keyframes swig {
+			15% {
+				transform: translateX(5px);
+			}
+			30% {
+				transform: translateX(-5px);
+			}
+			50% {
+				transform: translateX(4px);
+			}
+			60% {
+				transform: translateX(-4px);
+			}
+			80% {
+				transform: translateX(2px);
+			}
+			100% {
+				transform: translateX(-2px);
+			}
+		}
+		
+		.swig:hover {
+			animation: swig 1s ease;
+			animation-iteration-count: 1;
+			background-color: blueviolet;
+			color: white;
+		}
+		
+		.inset {
+			background-color: blueviolet;
+			width: 300px;
+			height: 100px;
+			padding: 20px;
+		}
+		
+		.inset:hover {
+			box-shadow: inset 0 0 0 10px #fff;
+			border: 1px solid silver;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<input type="button" class="fade" value="fade effect" \>
+	<hr \>
+	<input type="button" class="cc" value="change color" \>
+	<hr \>
+	<input type="button" class="grow" value="grow effect" \>
+	<hr \>
+	<input type="button" class="shrink" value="shrink effect" \>
+	<hr \>
+	<input type="button" class="swig" value="swig effect" \>
+	<hr \>
+	<input type="button" class="inset" value="inset border effect" \>
+
+
+
+
+
+
+
+</body>
+
+</html>

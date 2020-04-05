@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			outline: none;
+		}
+		/* Descendant Selector :selects all <p> elements inside <div> element*/
+		
+		div p {
+			color: red;
+		}
+		/*Child Selector:selects all <p> elements that are immediate children of a <div> element*/
+		
+		div >p {
+			text-decoration: underline;
+		}
+		/*Adjacent Sibling Selector*/
+		/*
+		
+		The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+		
+		The following example selects all <p> elements that are placed immediately after 
+		<div> element:
+		
+		*/
+		
+		div + p {
+			font: bold 11px comic sans ms;
+			color: green;
+		}
+		/*General Sibling Selector: selects all <p> elements that are siblings of <div> elements*/
+		
+		div ~p {
+			text-decoration: line-through;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<section>
+		<div>
+			<p>udhfjdhjf j</p>
+			<p>udhfjdhjf j</p>
+			<ul>
+				<p>dkfkjdkfjk</p>
+				<p>dkfkjdkfjk</p>
+				<p>dkfkjdkfjk</p>
+				<p>dkfkjdkfjk</p>
+				<p>dkfkjdkfjk</p>
+			</ul>
+			<p>udhfjdhjf j</p>
+			<p>udhfjdhjf j</p>
+			<p>udhfjdhjf j</p>
+			<p>udhfjdhjf j</p>
+			<p>udhfjdhjf j</p>
+		</div>
+		<p>odflkdlk</p>
+		<p>dkfkjdkjfkjd</p>
+	</section>
+</body>
+
+
+</html>

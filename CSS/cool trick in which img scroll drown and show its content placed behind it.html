@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		
+		.demo-2 {
+			position: relative;
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+			margin-left: 300px;
+			background-color: white;
+			box-sizing: border-box;
+		}
+		
+		.demo-2 h2 {
+			display: block;
+			font-family: comic sans ms;
+			color: royalblue;
+			font-size: 16px;
+			line-height: 28px;
+			margin: 5px;
+		}
+		
+		.demo-2 p {
+			display: block;
+			font-family: comic sans ms;
+			color: royalblue;
+			font-size: 18px;
+			line-height: 18px;
+			margin: 5px;
+		}
+		
+		.effect img {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			cursor: pointer;
+			height: 217px;
+			width: 300px;
+			transition: bottom .4s ease;
+		}
+		
+		li {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		ul {
+			margin: 0px;
+			padding: 0px;
+			border: 1px solid silver;
+		}
+		
+		.effect img.top:hover {
+			bottom: -90px;
+		}
+		
+		ul {
+			list-style: none;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+
+	<ul class="demo-2 effect">
+		<li>
+			<h2 class="zero">This is cool title</h2>
+			<p class="zero">May this effect work</p>
+		</li>
+		<li>
+			<img class="top" src="images/5.jpg" \>
+		</li>
+	</ul>
+
+</body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+		function person(name, age, address) {
+			this.name = name;
+			this.age = age;
+			this.address = address;
+			this.print = function() {
+				alert("name= " + this.name + "\nage= " + this.age + "\naddress= " + this.address);
+			}
+		}
+
+		var basit = new person("basit", 20, "solina");
+		var danish = new person("danish", 18, "natipora");
+		basit.print();
+		danish.print();
+		//Adding a new property to an existing object is easy:
+		danish.bikename = "pulsar";
+		//The property will be added to danish. Not to basit. Not to any other person objects.
+		alert(danish.bikename);
+		//Adding a new method to an existing object is also easy:
+
+		danish.full_details = function() {
+			this.print();
+		}
+		danish.full_details();
+		//The method will be added to danish. Not to basit. Not to any other person objects.
+		/*ddddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+
+		//		The JavaScript prototype property allows you to add new properties to an existing prototype:
+
+		person.prototype.district = "srinagar";
+		alert("Same Values: " + basit.district + " " + danish.district);
+		person.prototype.pincode = null;
+		basit.pincode = 190009;
+		danish.pincode = 190002;
+		alert("Different Values: " + basit.pincode + " " + danish.pincode)
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

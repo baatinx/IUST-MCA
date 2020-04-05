@@ -1,0 +1,851 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+
+		.big_wrapper {
+			display: block;
+			width: 100%;
+			border: none;
+			margin-bottom: 1000px;
+		}
+
+		.small_wrapper {
+			display: block;
+			width: 100%;
+			border: none;
+			margin: 0 auto;
+		}
+
+		.site_header {
+			display: block;
+			width: 100%;
+			border: none;
+		}
+
+		.site_header_outter_boundary {
+			border: none;
+			width: 100%;
+			border: none;
+			background: #fdfdfd;
+			margin-bottom: 20px;
+			box-shadow: 0 4px 10px #eee;
+		}
+
+		.site_header_inner_boundary {
+			display: block;
+			width: 1200px;
+			margin: auto;
+			border: none;
+		}
+
+		.menu_content_wrapper {
+			display: block;
+			border: none;
+			overflow: auto;
+		}
+
+		.menu_container,
+		.social_container,
+		.search_container {
+			display: inline-block;
+			border: none;
+		}
+
+		.menu_container {
+			float: left;
+		}
+
+		.social_container,
+		.search_container {
+			float: right;
+		}
+
+		.menu {
+			border: none;
+			border: none;
+			overflow: hidden;
+		}
+
+		.menu a {
+			float: left;
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			font: normal 12px sans-serif;
+			color: #999;
+			padding: 15px 10px;
+			transition: all .4s ease;
+		}
+
+		.menu a::before {
+			content: '\e223';
+		}
+
+		.menu a::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			transition: all .2s ease-out;
+		}
+
+		.menu a:nth-child(1)::after {
+			background-color: limegreen;
+		}
+
+		.menu a:nth-child(3)::after {
+			background-color: hotpink;
+		}
+
+		.menu a:nth-child(4)::after {
+			background-color: orangered;
+		}
+
+		.menu a:not(.active)::after {
+			bottom: -3px;
+		}
+
+		.active::after {
+			bottom: 0;
+			background-color: dodgerblue;
+		}
+
+		.menu a:not(.active):hover::after {
+			bottom: 0;
+		}
+		/*ddddddddddddddddddddddddddddddddddddd*/
+
+		.social {
+			display: block;
+			border: none;
+			margin-top: 5px;
+			overflow: auto;
+		}
+
+		.social img {
+			float: left;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			margin-right: 5px;
+		}
+		/*ddddddddddddddddddd*/
+
+		.search {
+			display: inline-block;
+			border: none;
+			margin-top: 5px;
+		}
+
+		.search input[type="button"] {
+			display: block;
+			width: 25px;
+			height: 25px;
+			background-color: #222;
+			border: none;
+			border-radius: 10%;
+			background-image: url(images/search-white%2020px.png);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		/*ddddddddddddddddddddddddddddddddd*/
+
+		.page_title_container {
+			display: block;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.page_title {
+			display: inline-block;
+			text-align: center;
+			padding-left: 50px;
+			padding-right: 50px;
+			border-right: 1px solid #bbb;
+			border-left: 1px solid #bbb;
+			display: none;
+		}
+
+		.page_title > a {
+			display: block;
+			text-decoration: none;
+			text-transform: capitalize;
+			font: normal 30px sans-serif;
+			color: #555;
+			transition: all .4s ease-out;
+		}
+
+		.page_title > a:hover {
+			color: #999;
+		}
+
+		.page_title p {
+			display: block;
+			font: normal 17px sans-serif;
+			text-transform: capitalize;
+			color: #999;
+		}
+
+		.page_title p sub a {
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			font: normal 11px sans-serif;
+			color: #777;
+		}
+
+		.page_title p sub a:hover {
+			text-decoration: underline;
+		}
+		/*dddddddddddddddddddddddddddddddddddddddddddd*/
+
+		.home_image_container {
+			display: block;
+			width: 100%;
+			border: none;
+			margin-top: 15px;
+		}
+
+		.home_image {
+			display: block;
+			width: 1300px;
+			height: auto;
+			margin: auto;
+			border: none;
+			overflow: visible;
+			display: none
+		}
+
+		.home_image a {
+			display: block;
+		}
+
+		.home_image img {
+			display: block;
+			width: 100%;
+			box-shadow: 1px 2px 6px #333;
+		}
+		/*ddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+		.post_header_container {
+			display: block;
+			width: 100%;
+			border-top: 1px solid #ddd;
+			text-align: center;
+			margin-top: 40px;
+			margin-bottom: 20px;
+		}
+
+		.post_header {
+			margin-top: 10px;
+			display: inline-block;
+			border: none;
+			;
+		}
+
+		.post_header >p {
+			border: none;
+			font: normal 30px sans-serif;
+			text-transform: capitalize;
+			color: #555;
+		}
+
+		.post_header>div>span {
+			color: #555;
+			font: normal 13px sans-serif;
+			text-transform: capitalize;
+		}
+		/*eeeeeeeeeeeee*/
+		/*ddddddddd*/
+		/*sssssssssssssssssss*/
+
+		.article_container {
+			display: block;
+			width: 100%;
+			border: none;
+			margin-top: 10px;
+			overflow: auto;
+		}
+
+		.article_inner_holder {
+			display: block;
+			width: 1345px;
+			overflow: auto;
+		}
+
+		.left_content,
+		.middle_content,
+		.right_content {
+			display: block;
+			float: left;
+		}
+
+		.left_content {
+			width: 300px;
+			border: none;
+		}
+
+		.middle_content {
+			border-top: 3px solid royalblue;
+			border: none;
+			width: 800px;
+			margin-left: 10px;
+		}
+
+		.right_content {
+			border-top: 3px solid green;
+			width: 230px;
+			border: none;
+		}
+		/*ddddddddddddddddddddddddddddd*/
+
+		.left_holder {
+			overflow: auto;
+			width: 290px;
+			margin: auto;
+			border: none;
+			margin-top: 0px;
+		}
+
+		.heading_container {
+			overflow: auto;
+			border-bottom: 3px solid #333;
+			margin-bottom: 20px;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+
+		.heading_container:not(:first-of-type) {
+			margin-top: 70px;
+		}
+
+		.heading_container:first-of-type {
+			margin-top: 0px;
+		}
+
+		.heading {
+			display: inline-block;
+			float: left;
+			border: none;
+			background: #333;
+			color: white;
+			font: normal 15px sans-serif;
+			padding: 6px 20px;
+			text-transform: uppercase;
+		}
+
+		.poster_container {
+			display: block;
+			opacity: 1;
+			transition: all .4s ease-out;
+			margin-bottom: 15px;
+			margin-left: 5px;
+			margin-right: 5px;
+			border: none;
+			overflow: auto;
+		}
+
+		.poster {
+			display: block;
+			position: relative;
+			border: 1px solid #bbb;
+			transition: all .4s ease-out;
+			box-shadow: 1px 3px 5px #aaa;
+		}
+
+		.poster:hover {
+			opacity: .8;
+		}
+
+		.poster_container img {
+			width: 100%;
+		}
+
+		.poster_container span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border: none;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			text-transform: capitalize;
+			font: normal 13px sans-serif;
+			padding-left: 10px;
+			padding-right: 10px;
+			transition: all .4s ease;
+			text-align: justify;
+		}
+
+		.poster_footer {
+			border: none;
+			margin-top: 10px;
+			overflow: auto;
+			border: 1px solid red;
+		}
+
+		.poster_container_footer .date,
+		.poster_container_footer .by,
+		.poster_container_footer .name_and_image_container,
+		.poster_container_footer .tag,
+		.poster_container_footer .share {
+			display: inline-block;
+			border: none;
+			text-transform: capitalize;
+			border: none;
+		}
+
+		.poster_container_footer .date,
+		.poster_container_footer .by,
+		.poster_container_footer .name_and_image_container {
+			float: left;
+		}
+
+		.poster_container_footer .tag,
+		.poster_container_footer .share {
+			float: right;
+		}
+
+		.poster_container_footer .date {
+			color: #888;
+			font: normal 10px sans-serif;
+			margin-left: 10px;
+		}
+
+		.poster_container_footer .by {
+			color: #555;
+			text-transform: uppercase;
+			font: normal 10px sans-serif;
+			margin-left: 5px;
+		}
+
+		.poster_container_footer .name_and_image_container {
+			position: relative;
+			margin-left: 5px;
+			overflow: visible;
+			border: none;
+		}
+
+		.name {
+			display: inline-block;
+			border: none;
+			text-decoration: none;
+			color: limegreen;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 0 3px;
+			overflow: visible;
+		}
+
+		.image_container {
+			border: none;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			width: 35px;
+		}
+
+		.image_container a {
+			position: relative;
+			display: block;
+			background-color: transparent;
+			border: none;
+			opacity: 0;
+			transition: all .2s ease-out;
+			margin-bottom: 0px;
+		}
+
+		.image_container img {
+			display: block;
+			border-radius: 50%;
+			border: none;
+			z-index: 100000;
+		}
+
+		.name_and_image_container:hover .image_container a {
+			opacity: 1;
+			margin-bottom: 5px;
+		}
+
+		.poster_container_footer .tag,
+		.poster_container_footer .share {
+			position: relative;
+			padding-left: 12px;
+			border: none;
+			color: #999;
+			font: normal 11px sans-serif;
+			text-decoration: none;
+		}
+
+		.poster_container_footer .tag {}
+
+		.poster_container_footer .share {
+			margin-left: 10px;
+		}
+
+		.poster_container_footer .tag:hover,
+		.poster_container_footer .share:hover {
+			text-decoration: underline;
+		}
+
+		.poster_container_footer .tag::before {
+			content: '\f012';
+		}
+
+		.poster_container_footer .share::before {
+			content: '\f012';
+		}
+
+		.poster_container_footer .tag::before,
+		.poster_container_footer .share::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all .2s ease-out;
+		}
+
+		.poster_container_footer .tag:hover::before,
+		.poster_container_footer .share:hover::before {
+			animation-name: spin;
+			animation-duration: .2s;
+			transition-timing-function: linear;
+			color: limegreen;
+		}
+
+		@keyframes spin {
+			from {
+				transform: translateY(0px)
+			}
+			50% {
+				transform: translateY(-6px)
+			}
+			to {
+				transform: translateY(0px)
+			}
+		}
+		/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+		.middle_content h1,
+		.middle_content h2,
+		.middle_content p,
+		.middle_content ul {
+			display: block;
+			font-family: sans-serif;
+		}
+
+		.middle_content h1 {
+			color: #444;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			font-weight: bold;
+			font-size: 30px;
+			margin-top: 10px;
+		}
+
+		.publish {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.publish p {
+			text-align: center !important;
+			color: #999 !important;
+			text-transform: capitalize;
+			margin: 0 !important;
+		}
+
+		.middle_content h2 {
+			color: #444;
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		.middle_contenth2:first-of-type {
+			margin-top: 5px;
+		}
+
+		.middle_content h2:not(:first-of-type) {
+			margin-top: 25px;
+		}
+
+		.middle_content p {
+			color: #777;
+			font-weight: normal;
+			font-size: 12px;
+			margin-top: 10px;
+			line-height: 25px;
+			word-spacing: 1px;
+			text-align: justify;
+		}
+
+		.middle_content p strong a {
+			color: #165AAA;
+			text-decoration: underline;
+		}
+
+		.middle_content p strong a:hover {
+			text-decoration: none;
+		}
+
+		.special_para {
+			color: white !important;
+			font-size: 13px !important;
+			padding: 10px 50px;
+			border: none;
+			background: #333;
+			border-top: 5px solid dodgerblue;
+			margin-top: 30px !important;
+		}
+
+		.middle_content ul {
+			display: block;
+			border: none;
+			margin-top: 10px;
+		}
+
+		.middle_content li {
+			list-style: disc;
+			margin-left: 30px;
+			color: #777;
+			font: normal 12px sans-serif;
+			margin-top: 10px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="big_wrapper">
+		<div class="small_wrapper">
+			<header class="site_header">
+				<div class="site_header_outter_boundary">
+					<div class="site_header_inner_boundary">
+						<div class="menu_content_wrapper">
+							<div class="menu_container">
+								<nav class="menu">
+									<a href="#"> about</a>
+									<a href="#" class=" active"> books</a>
+									<a href="#"> subscribe</a>
+									<a href="#"> contact</a>
+								</nav>
+
+							</div>
+
+							<div class="search_container">
+								<div class="search">
+
+								</div>
+							</div>
+							<div class="social_container">
+								<div class="social">
+									<a href="#"> <img src="images/facebook_round.png" title="Facebook"></a>
+									<a href="#"> <img src="images/twitter_round.png" title="Twitter"></a>
+									<a href="#"> <img src="images/googleplus_round.png" title="GooglePlus"></a>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="page_title_container">
+					<div class="page_title">
+						<a href="#" title="click here to know about danny brown">danny&nbsp;brown</a>
+						<p>there's more to life than social media <sub><a href=" # " title="Read More">Read More</a></sub></p>
+					</div>
+				</div>
+
+			</header>
+			<section class="site_main ">
+				<div class="home_image_container ">
+					<div class="home_image ">
+						<a href="# ">
+							<img src="images/crew.jpg ">
+						</a>
+					</div>
+				</div>
+				<article class=article_container>
+
+					<div class="article_inner_holder">
+						<div class="left_content">
+							<div class="left_holder">
+								<div class="heading_container">
+									<p class="heading">related posts</p>
+								</div>
+								<div class="poster_container">
+									<a class="poster" href="#">
+										<img src="images/car4.jpg" />
+										<span>top 10  best car ever made !</span>
+									</a>
+									<div class="poster_container_footer">
+										<li class="date">Feb 20, 2017</li>
+										<li class="by">by</li>
+										<div class="name_and_image_container">
+											<a href="#" class="name">admin</a>
+											<div class="image_container">
+												<a href="#"><img src="images/girl.jpg"></a>
+											</div>
+										</div>
+										<a href="#" class="share" title="share with friends">share</a>
+										<a href="#" class="tag" title="tag people">tag</a>
+									</div>
+
+								</div>
+
+
+								<div class="poster_container">
+									<a href="#" class="poster">
+										<img src="images/car2.jpg">
+										<span>know why BMW is giving 20% discount on redsun f013.</span>
+									</a>
+									<div class="poster_container_footer">
+										<li class="date">Feb 20, 2017</li>
+										<li class="by">by</li>
+										<div class="name_and_image_container">
+											<a href="#" class="name">basit</a>
+											<div class="image_container">
+												<a href="#"><img src="images/girl.jpg"></a>
+											</div>
+										</div>
+										<a href="#" class="share" title="share with friends">share</a>
+										<a href="#" class="tag" title="tag people">tag</a>
+									</div>
+								</div>
+
+								<div class="poster_container">
+									<a href="#" class="poster">
+										<img src="images/car3.jpg">
+										<span>ferrari ready to launch</span>
+									</a>
+									<div class="poster_container_footer">
+										<li class="date">Feb 20, 2017</li>
+										<li class="by">by</li>
+										<div class="name_and_image_container">
+											<a href="#" class="name">numan</a>
+											<div class="image_container">
+												<a href="#"><img src="images/girl.jpg"></a>
+											</div>
+										</div>
+										<a href="#" class="share" title="share with friends">share</a>
+										<a href="#" class="tag" title="tag people">tag</a>
+									</div>
+								</div>
+								<div class="heading_container">
+									<p class="heading">popular posts</p>
+								</div>
+
+
+								<div class="poster_container">
+									<a href="#" class="poster">
+										<img src="images/car1.jpg">
+										<span>top 10  best car ever made in asian countries !</span>
+									</a>
+									<div class="poster_container_footer">
+										<li class="date">Feb 20, 2017</li>
+										<li class="by">by</li>
+										<div class="name_and_image_container">
+											<a href="#" class="name">sufaria</a>
+											<div class="image_container">
+												<a href="#"><img src="images/girl.jpg"></a>
+											</div>
+										</div>
+										<a href="#" class="share" title="share with friends">share</a>
+										<a href="#" class="tag" title="tag people">tag</a>
+									</div>
+								</div>
+								<div class="poster_container">
+									<a class="poster" href="#">
+										<img src="images/car4.jpg" />
+										<span>top 10  best car ever made !</span>
+									</a>
+									<div class="poster_container_footer">
+										<li class="date">Feb 20, 2017</li>
+										<li class="by">by</li>
+										<div class="name_and_image_container">
+											<a href="#" class="name">admin</a>
+											<div class="image_container">
+												<a href="#"><img src="images/girl.jpg"></a>
+											</div>
+										</div>
+										<a href="#" class="share" title="share with friends">share</a>
+										<a href="#" class="tag" title="tag people">tag</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="middle_content">
+							<h1>planning ahead</h1>
+							<div class="publish">
+								<p>published may 30,2016</p>
+							</div>
+
+							<h2>1. Planning Ahead For Your Business</h2>
+							<p>
+								We like to think we’ll know what to do when our business hits a rough patch. But do we? Do we know to have X amount set aside to pay the bills, employees, contractors and ourselves? Do we make our business and/or <strong><a href="#">marketing plans</a></strong> flexible enough to be able to change on the fly? Do we plan for trends in the marketplace and how we’ll overcome them? Do we plan ahead on changes in the <strong><a href="#">developed countries</a></strong> in different mindsets to our current business approaches
+							</p>
+							<h2>2. Planning Ahead In Your Job</h2>
+							<p>
+								There used to be a time when you had a job for life. No more. Now, you’e lucky you’re at the same place for more than a couple of years. So how are you planning ahead for that? Are you taking a night school course to expand your skills for a new career?So how are you planning ahead for that? Are you taking a night school course to expand your skills for a new career?So how are you planning ahead for that? Are you taking a <strong><a href="#">night school course</a></strong> to expand your skills for a new career?So how are you planning ahead for that? Are you taking a night school course to expand your skills for a new career? Are you keeping on top of industry news about your employer or their industry? Are you planning ahead in case your employer goes bust tomorrow? Are you planning how to use the contacts you’re making when/if push comes to shove?
+							</p>
+							<p>Because we were driving (and I know how some of our local drivers are – think New York cabbies!), I couldn’t help but think of some of the things that could go wrong:</p>
+							<ul>
+								<li>A car suddenly brakes in front of her.</li>
+								<li>A child runs out in front of the car.</li>
+								<li>She’s rear-ended by the driver behind.</li>
+								<li>The dog sees another dog and starts going wild.</li>
+								<li>Once the file has been saved, go back to the Windows USB/DVD Download Tool to create USB device.The dog sees another dog and starts going wild.The dog sees another dog and starts going wild.</li>
+								<li>A child runs out in front of the car.</li>
+							</ul>
+							<p class="special_para">A skilled communicator must be aware of these barriers and try to reduce their impact by continually checking understanding and by offering appropriate feedback.</p>
+							<h2>3. Planning Ahead On Your Blog</h2>
+							<p>
+								If you blog, you may or may not have a blogging schedule. Myself, I pretty much write when an idea comes to me and I’ll write almost there and then – I don’t have any drafts. But what if I fell ill, and my blog was dead for a month or more? Are you planning on having a back-up plan for you falling ill? Or <strong><a href="#">vacations</a></strong> Or if your server goes down, or your host goes out of business?
+							</p>
+							<h2>4. Planning Ahead In Your Life</h2>
+							<p>
+								Okay, this is probably the hardest to plan ahead for, since life is pretty good at throwing us curve balls. But there are still ways we can plan ahead, either for us or for those around us. For instance, have you planned how much extra you can put to the mortgage to make your home your own faster? Or how you’ll cope if your partner falls seriously ill, and you have children? Who can you reach out to? Or how about the discussion that’ll arise if your son or daughter comes home one day and says their views on a topic you’re <strong><a href="#">passionate about career</a></strong> about have changed and they’re in direct – and possibly harmful – conflict with you?
+							</p>
+							<h2>5. Your Turn</h2>
+							<p>
+								These are just some of the ways we can all plan ahead, whether in our personal or professional lives, or somewhere in-between. There are many more – the main point is that they’re all related. What happens at work affects your home life, and very often vice versa.
+							</p>
+							<p>
+								Planning ahead might not stop certain events from happening; but it sure as hell can prepare you better. After all, you never know when you’re going to get hit by a flying dog Planning ahead might not stop certain events from happening; but it sure as hell can prepare you better. After all, you never know when you’re going to get hit by a flying dog <strong><a href="#">resistance to change</a></strong> or <strong><a href="#">a lack of motivation.</a></strong> Planning ahead might not stop certain events from happening; but it sure as hell can prepare you better but it sure as hell can prepare you better but it sure as hell can prepare you better. After all, you never know when you’re going to get hit.Planning ahead might not stop certain events from happening; but it sure as hell can prepare you better. After all, you never know when you’re going to get hit by a flying dog.
+							</p>
+						</div>
+						<div class="right_content">
+							<div class="right_holder">
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<footer class="site_footer ">
+				<p>this is site footer</p>
+			</footer>
+		</div>
+	</div>
+
+</body>
+
+</html>

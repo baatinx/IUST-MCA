@@ -1,0 +1,19 @@
+// "out": "../css/practice.css"
+@light_color: #999;
+@dark_color: red;
+@light_font_size: 12px;
+@normal_font_size: 14px;
+@heavy_font_size: 16px;
+@normal_font_family: sans-serif,tahoma;
+
+h1,
+h2 {
+  font: bold @heavy_font_size @dark_color;
+  color: @dark_color;
+}
+
+p,
+span {
+  font: normal @normal_font_size @light_color;
+  color: @light_color
+}

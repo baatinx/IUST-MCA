@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+
+		.wrapper {
+			width: 900px;
+			margin: auto;
+			margin-top: 100px;
+			padding: 10px;
+		}
+
+		.accordion {
+			width: 100%;
+			background-color: #eee;
+			padding: 15px 20px;
+			text-align: left;
+			border: none;
+			font: normal 14px sans-serif;
+			color: #444;
+			text-transform: capitalize;
+			cursor: pointer;
+		}
+
+		.accordion:hover {
+			background-color: #ddd;
+		}
+
+		.panel {
+			font: normal 13px sans-serif;
+			color: #444;
+			max-height: 0;
+			border: 1px solid red;
+			overflow: hidden;
+			transition: all.2s ease-out;
+		}
+
+		.accordion:hover+.panel {
+			max-height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName('accordion');
+		var i;
+		for (i = 0; i < acc.length; i++) {
+
+
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<button type="button" class="accordion">section 1</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<button type="button" class="accordion">section 2</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<button type="button" class="accordion">section 3</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</div>
+	</div>
+</body>
+
+</html>

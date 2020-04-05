@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function literal</title>
+</head>
+<script type="text/javascript">
+	var function_literal;
+	function_literal=function(x,y)
+	{
+		 var sum ;
+		 sum=x+y;
+		 return sum;
+	}
+
+	function nested_function()
+	{
+		var a,b,result;
+		a=4;
+		b=6;
+		result=function_literal(a,b);
+		alert("sum of "+ a +" and "+b + " is " + result);
+	}
+</script>
+<body>
+<font color="0066ff" size="5">
+<tt>
+<font color="a1a1a1" size="6"><center>This page demonstrates the use of <font color="00cc00">function literal</center></font></font>
+<br \>
+<input type="button" onclick="nested_function()" value="click here">
+<font> to know the sum of a and b</font>
+</tt>
+</font>
+</body>
+</html>

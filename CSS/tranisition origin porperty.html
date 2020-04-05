@@ -1,0 +1,112 @@
+<html>
+
+<head>
+	<style>
+		body {
+			font: bold 17px comic sans ms;
+		}
+		
+		.wrapper {
+			width: 504px;
+			margin: 0 auto;
+			overflow: auto;
+			height: auto;
+			padding-bottom: 20px;
+		}
+		
+		.wrapper {}
+		
+		.content {
+			float: left;
+			width: 500px;
+			border-bottom: 5px solid silver;
+			margin-bottom: 10px;
+			margin: auto;
+			box-sizing: border-box;
+			padding-left: 50px;
+		}
+		
+		.last {
+			border: 1px solid white;
+		}
+		
+		.bt {
+			background-color: white;
+			color: black;
+			height: 100px;
+			width: 400px;
+			border: 5px solid royalblue;
+			font: bold 17px comic sans ms;
+			border-radius: 2px;
+			transition: all .4s ease-in-out;
+		}
+		
+		.bt1 {
+			transform-origin: 0 0;
+		}
+		
+		.bt2 {
+			transform-origin: 100% 0;
+		}
+		
+		.bt3 {
+			transform-origin: 100% 100%;
+		}
+		
+		.bt1:hover {
+			transform: rotateZ(5deg);
+			background: royalblue;
+			border: 5px solid #dddddd;
+			color: white;
+			border-left-color: red;
+			border-top-color: red;
+		}
+		
+		.bt2:hover {
+			transform: rotateZ(5deg);
+			background: royalblue;
+			border: 5px solid #dddddd;
+			color: white;
+			border-right-color: red;
+			border-top-color: red;
+		}
+		
+		.bt3:hover {
+			transform: rotateZ(5deg);
+			background: royalblue;
+			border: 5px solid #dddddd;
+			color: white;
+			border-right-color: red;
+			border-bottom-color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="wrapper">
+		<div class="wrapper2">
+			<div class="content">
+				<p>this button has transform orgin (0 0) </p>
+				<button class=" bt bt1">CSS TRANSITION ORIGNIN</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="content">
+				<p>this button has transform orgin right (100% 0)</p>
+
+				<button class=" bt bt2">CSS TRANSITION ORIGNIN</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="content last">
+				<p>this button has transform orgin 100% 100%</p>
+				<button class="bt bt3">CSS TRANSITION ORIGNIN</button>
+				&nbsp;&nbsp;
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

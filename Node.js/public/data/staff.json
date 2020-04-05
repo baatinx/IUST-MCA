@@ -1,0 +1,58 @@
+[
+    {
+        "name": "basit",
+        "age": "23",
+        "gender": "male",
+        "address": "solina payeen",
+        "language": "node.js"
+    },
+    {
+        "name": "danish",
+        "age": "20",
+        "gender": "male",
+        "address": "natipora",
+        "language": "react.js"
+    },
+    {
+        "name": "faizan",
+        "age": "18",
+        "gender": "male",
+        "address": "rambagh",
+        "language": "node.js"
+    },
+    {
+        "name": "naveed",
+        "age": "15",
+        "gender": "male",
+        "address": "barzullah",
+        "language": "angular.js"
+    },
+    {
+        "name": "usmaan",
+        "age": "22",
+        "gender": "male",
+        "address": "chanapora",
+        "language": "react.js"
+    },
+    {
+        "name": "musa",
+        "age": "25",
+        "gender": "male",
+        "address": "nitipora",
+        "language": "node.js"
+    },
+    {
+        "name": "zahid",
+        "age": "25",
+        "gender": "male",
+        "address": "solina payeen",
+        "language": "angular.js"
+    },
+    {
+        "name": "adnan",
+        "age": "20",
+        "gender": "male",
+        "address": "batamaloo",
+        "language": "react.js"
+    }
+]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script constructor function</title>
+	<script type="text/javascript">
+		function person(name,id,gender)
+		{
+			this.name=name;
+			this.id=id;
+			this.gender=gender;
+		}
+
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+		var customer=new person("danish",12,"male");
+		document.write("constructor function returns the function that creates the instance of the object   <hr \>")
+		document.write(customer.constructor);
+</script>
+
+</body>
+</html>

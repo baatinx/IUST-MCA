@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<style type="text/css">
+		@keyframes a1 {
+			0% {
+				background-color: red;
+			}
+			20% {
+				background-color: white;
+				top: 200px;
+			}
+			30% {
+				background-color: orangered;
+				top: 50px;
+				left: 300px;
+			}
+			50% {
+				background-color: darkblue;
+				top: 50;
+				left: 600px;
+			}
+			60% {
+				background-color: red;
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		div {
+			background-color: red;
+			height: 200px;
+			width: 300px;
+			animation-name: a1;
+			animation-delay: 1s;
+			animation-duration: 6s;
+			animation-iteration-count: 2;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+			position: absolute;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>
+
+	<div>
+	</div>
+</body>
+
+</html>

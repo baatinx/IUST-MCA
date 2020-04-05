@@ -1,0 +1,203 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.big_wrapper {
+			display: block;
+			border: none;
+		}
+		
+		.first_line,
+		.second_line {
+			display: block;
+			border: none;
+		}
+		
+		p {
+			text-align: center;
+			font: normal 13px sans-serif;
+			color: #888;
+			text-transform: capitalize;
+			padding: 9px;
+		}
+		
+		.first_line_content_holder,
+		.second_line_content_holder {
+			display: block;
+			width: 1200px;
+			margin: auto;
+			border: none;
+		}
+		
+		.anchor_holder {
+			display: inline-block;
+			border: none;
+		}
+		
+		.second_line {
+			background: #f8f8f8;
+		}
+		/*dddddddddddddddddddddddddddddddddddddd*/
+		
+		.second_line_content_holder {
+			overflow: visible;
+		}
+		
+		.first_li {
+			position: relative;
+			border: none;
+			float: left;
+			display: inline-block;
+			overflow: visible;
+		}
+		
+		.first_li_anchor {
+			display: inline-block;
+			color: #aaa;
+			text-decoration: none;
+			font: normal 12px sans-serif;
+			padding: 4px 10px;
+			text-transform: capitalize;
+			transition: all .4s ease-out;
+		}
+		
+		.first_li:hover {
+			background: #eee;
+		}
+		
+		.first_li_anchor:hover {
+			color: #666;
+		}
+		
+		.dropdown {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: -20px;
+			width: 150px;
+			overflow: auto;
+			background-color: transparent;
+			overflow: visible;
+		}
+		
+		.first_li:hover .dropdown {
+			display: block;
+		}
+		
+		.arrow {
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			margin-top: 5px;
+			/* note*/
+			margin-left: 20px;
+			border-width: 0px 10px 10px 10px;
+			border-style: solid;
+			border-color: transparent transparent #ddd transparent;
+		}
+		
+		.arrow_border {
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			margin-top: 6px;
+			/* note*/
+			margin-left: 20px;
+			border-width: 0px 10px 10px 10px;
+			border-style: solid;
+			border-color: transparent transparent white transparent;
+		}
+		
+		.dropdown_content_holder {
+			display: block;
+			width: 100%;
+			background-color: white;
+			margin-top: 14px;
+			padding-top: 5px;
+			padding-bottom: 6px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			box-shadow: 2px 3px 6px #ddd
+		}
+		
+		.dropdown_anchor {
+			text-align: left;
+			text-decoration: none;
+			display: block;
+			width: 100%;
+			margin: auto;
+			color: #999;
+			text-transform: capitalize;
+			font: normal 12px sans-serif;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			border-radius: 4px;
+			padding-left: 10px;
+			transition: all .1s ease-out
+		}
+		
+		.dropdown_anchor:hover {
+			background-color: #f7f7f7;
+			color: #555;
+			padding-left: 12px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="big_wrapper">
+		<div class="small_wrapper">
+			<div class="first_line">
+				<div class="first_line_content_holder">
+					<p>first line content goes here</p>
+				</div>
+			</div>
+			<div class="second_line">
+				<div class="second_line_content_holder">
+					<div class="anchor_holder">
+						<li class="first_li"><a href="#" class="first_li_anchor">Questions</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">tags</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">developer</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">notications</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">design</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">feedback</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">upload</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">Questions</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">register</a></li>
+						<li class="first_li"><a href="#" class="first_li_anchor">developer</a></li>
+						<li class="first_li">
+							<a href="#" class="first_li_anchor">more</a>
+							<div class="dropdown">
+								<span class="arrow"></span>
+								<span class="arrow_border"></span>
+								<div class="dropdown_content_holder">
+									<a href="#" class="dropdown_anchor" title="Get Popular News and Updates">popular</a>
+									<a href="#" class="dropdown_anchor" title="view site map">site map</a>
+									<a href="#" class="dropdown_anchor" title="All stuff for Developers">developer</a>
+									<a href="#" class="dropdown_anchor" title="User log in ">log in</a>
+									<a href="#" class="dropdown_anchor" title="Tag your friends">tags</a>
+								</div>
+							</div>
+						</li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

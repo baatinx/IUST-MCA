@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+
+	</style>
+
+	<script type="text/javascript">
+		var txt1, pos;
+		txt1 = "Please locate where locate occurs!";
+		//The length property returns the length of a string:
+		alert("length of string is " + txt1.length);
+		//The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+
+		pos = txt1.indexOf("locate");
+		alert("first locate is at index  (indexof)" + pos);
+
+		//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+		pos = txt1.lastIndexOf("locate");
+		alert("last locate is at index (lastindexof)" + pos);
+		//Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.Note JavaScript counts positions from zero.
+
+		pos = txt1.lastIndexOf("best");
+		alert("if not found it returns -1: (lastindexof)" + pos);
+
+
+		//important note:Both methods accept a second parameter as the starting position
+		alert("from here all about search()");
+		/*///////////////////////////////////////////////////////////////////////////*/
+		//The search() method searches a string for a specified value and returns the position of the match:
+		pos = txt1.search("locate");
+		alert("first locate is at index (search) " + pos);
+		/*The two methods, indexOf() and search(), are equal.
+
+		They accept the same arguments (parameters), and they return the same value.
+
+		The two methods are equal, but the search() method can take much more powerful search values.
+
+		You will learn more about powerful search values in the chapter about regular expressions.*/
+
+	</script>
+</head>
+
+<body>
+	<p>Please locate where locate occurs!</p>
+</body>
+
+</html>

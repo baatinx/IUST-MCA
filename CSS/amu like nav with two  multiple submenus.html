@@ -1,0 +1,440 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: 0;
+		}
+		
+		header {
+			display: block;
+			border: none;
+			border-top: 5px solid #009E6C;
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+		
+		.top_line,
+		.bottom_line {
+			border: 1px solid silver;
+			border: none;
+			height: 60px;
+		}
+		
+		.top_line {
+			background-color: #f3f3f3;
+		}
+		
+		.inside_top_line {
+			display: block;
+			width: 1200px;
+			height: 60px;
+			margin: 0 auto;
+			overflow: auto;
+		}
+		
+		.search_panel {
+			display: inline-block;
+			border: 3px solid white;
+			width: auto;
+			float: right;
+			margin-top: 10px;
+		}
+		
+		.bt1,
+		.txt1 {
+			height: 30px;
+			float: left;
+		}
+		
+		.txt1 {
+			border: none;
+			width: 250px;
+			font: normal 13px sans-serif;
+		}
+		
+		.bt1 {
+			border: none;
+			background-color: silver;
+			width: 40px;
+			background-image: url(images/search_box_icon.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: all .3s ease-out;
+		}
+		
+		.bt1:hover {
+			background-color: #009E6C;
+		}
+		
+		.bottom_line {
+			background-color: white;
+		}
+		
+		.inside_top_line,
+		.inside_bottom_line {
+			border: none;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.logo_container {
+			position: absolute;
+			top: -5px;
+			border: none;
+			height: 140px;
+			width: 150px;
+			background-image: url(images/forrst.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: 0 0 10px #333;
+		}
+		
+		nav {
+			display: inline-block;
+			border: none;
+			float: right;
+			height: 60px;
+			width: auto;
+		}
+		
+		.base_item {
+			display: inline-block;
+			position: relative;
+			border: 1px solid red;
+			border: none;
+			height: 60px;
+			width: auto;
+			transition: all .4s ease-out;
+		}
+		
+		.base_item:hover {
+			background: #f3f3f3;
+		}
+		
+		.base_item_anchor {
+			display: inline-block;
+			text-decoration: none;
+			font: bold 14px sans-serif;
+			color: #666;
+			height: 60px;
+			line-height: 56px;
+			vertical-align: middle;
+			text-transform: capitalize;
+			padding-left: 19px;
+			padding-right: 19px;
+			transition: all .2s ease-out;
+			border: 1px solid green;
+			border: none;
+			transition: all .2s ease-out;
+		}
+		
+		.base_item_anchor:hover {
+			color: #009E6C;
+		}
+		
+		.base_content_holder {
+			position: absolute;
+			top: 100%;
+			left: 0%;
+			width: 200px;
+			height: auto;
+			background-color: white;
+			display: none;
+			border: none;
+			box-shadow: 0 0 10px #333;
+			z-index: 10;
+		}
+		
+		.submenu_holder_at_level_1 {
+			z-index: 20;
+		}
+		
+		.submenu_holder_at_level_2 {
+			z-index: 30;
+		}
+		
+		.base_item:hover .base_content_holder {
+			display: block;
+		}
+		
+		.main_link,
+		.secondary_main_link {
+			position: relative;
+			text-decoration: none;
+			font: lighter 14px sans-serif;
+			display: block;
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+			border: none;
+			text-align: left;
+			color: #666;
+			text-transform: capitalize;
+			transition: all .4s ease-out;
+		}
+		
+		.secondary_main_link:hover {
+			text-decoration: underline;
+		}
+		
+		.main_link:hover {
+			background-color: #f3f3f3;
+			text-decoration: underline;
+		}
+		
+		.submenu_trigger {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: all .4s ease-out;
+		}
+		
+		.submenu_trigger:hover {
+			background-color: #f3f3f3;
+		}
+		
+		.submenu_holder {
+			position: absolute;
+			top: 0%;
+			left: 100%;
+			background: white;
+			width: 200px;
+			display: none;
+			box-shadow: 0 0 10px #666;
+		}
+		
+		.submenu_trigger:hover >.submenu_holder {
+			display: block;
+		}
+		
+		.base_item_3 .department_submenus .submenu_holder_at_level_1 {
+			width: 250px !important;
+		}
+		
+		.base_item_3 .department_submenus .submenu_holder_at_level_2 {
+			overflow-y: scroll;
+			width: 300px !important;
+		}
+		
+		.botany {
+			height: 345px !important;
+		}
+		
+		.arabic {
+			height: 285px !important;
+		}
+		
+		.home_image_section {
+			display: block;
+			width: 100%;
+			height: auto;
+			border: 1px solid red;
+			border: none;
+			background-color: #eee;
+		}
+		
+		.img_holder {
+			display: block;
+			max-width: 1300px;
+			min-width: 1200px;
+			height: auto;
+			margin: 0 auto;
+			border: 1px solid red;
+			border: none;
+		}
+		
+		.img_holder img {
+			width: 100%;
+			max-height: 400px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<header>
+		<div class="top_line">
+			<div class="inside_top_line">
+				<div class="search_panel">
+					<input type="text" class="txt1" autofocus="on" spellcheck="false" placeholder=" Search here . . .">
+					<a href="#" class="bt1"></a>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_line">
+			<div class="inside_bottom_line">
+				<div class="logo_container"></div>
+				<nav>
+					<div class="base_item base_item_1">
+						<a href="#" class="base_item_anchor">home</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">vision</a>
+							<a href="#" class="main_link">mission</a>
+						</div>
+					</div>
+
+					<div class="base_item base_item_2">
+						<a href="#" class="base_item_anchor">adminstration</a>
+						<div class="base_content_holder">
+							<div class="submenu_trigger">
+								<a href="#" class="main_link">courses offered</a>
+								<div class="submenu_holder submenu_holder_at_level_1">
+									<a href="#" class="main_link">professional</a>
+									<a href="#" class="main_link">non-professional</a>
+									<a href="#" class="main_link">non-professional</a>
+									<a href="#" class="main_link">non-professional</a>
+									<a href="#" class="main_link">non-professional</a>
+								</div>
+							</div>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered</a>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered</a>
+							<a href="#" class="main_link">mission</a>
+							<a href="#" class="main_link">courses offered<a>
+							<a href="#" class="main_link">mission</a>
+						</div>
+					</div>
+					<div class="base_item base_item_3">
+						<a href="#" class="base_item_anchor">academics</a>
+						<div class="base_content_holder">
+							<a href="#" class="main_link">acadimic calender</a>
+							<a href="#" class="main_link">faculties</a>
+							<div class="submenu_trigger department_submenus">
+								<a href="#" class="secondary_main_link">departments</a>
+								<div class="submenu_holder submenu_holder_at_level_1">
+									<div class="submenu_trigger">
+										<a href="#" class="secondary_main_link">faculty science</a>
+										<div class="submenu_holder submenu_holder_at_level_2  botany">
+											<a href="#" class="main_link">department of botany</a>
+											<a href="#" class="main_link">department of chemistry</a>
+											<a href="#" class="main_link">department of computer application</a>
+											<a href="#" class="main_link">department of geography</a>
+											<a href="#" class="main_link">department of geology</a>
+											<a href="#" class="main_link">department of mathamatics</a>
+											<a href="#" class="main_link">department of physics</a>
+											<a href="#" class="main_link">department of statistics</a>
+											<a href="#" class="main_link">department of zoology</a>
+										</div>
+									</div>
+									<div class="submenu_trigger">
+										<a href="#" class="secondary_main_link">faculty arts, commerece & humanities</a>
+										<div class="submenu_holder submenu_holder_at_level_2   arabic">
+											<a href="#" class="main_link">department of arabic</a>
+											<a href="#" class="main_link">department of commerece</a>
+											<a href="#" class="main_link">department of economics</a>
+											<a href="#" class="main_link">department of education</a>
+											<a href="#" class="main_link">department of hindi</a>
+											<a href="#" class="main_link">department of history</a>
+											<a href="#" class="main_link">department of islamic studies</a>
+											<a href="#" class="main_link">department of kashmiri</a>
+											<a href="#" class="main_link">department of persian</a>
+											<a href="#" class="main_link">department of philosphy</a>
+											<a href="#" class="main_link">department of political science</a>
+											<a href="#" class="main_link">department of english</a>
+											<a href="#" class="main_link">department of functional english</a>
+											<a href="#" class="main_link">department of psychology</a>
+											<a href="#" class="main_link">department of punjabi</a>
+											<a href="#" class="main_link">department of sanskrit</a>
+											<a href="#" class="main_link">department of sociology</a>
+											<a href="#" class="main_link">department of tourism</a>
+											<a href="#" class="main_link">department of urdu</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<a href="#" class="main_link">distance learning</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+							<a href="#" class="main_link">art gallery</a>
+						</div>
+					</div>
+
+					<div class="base_item  base_item_4">
+						<a href="#" class="base_item_anchor">notification</a>
+					</div>
+					<div class="base_item  base_item_5">
+						<a href="#" class="base_item_anchor">Examination</a>
+					</div>
+					<div class="base_item  base_item_6">
+						<a href="#" class="base_item_anchor">results</a>
+					</div>
+					<div class="base_item  base_item_7">
+						<a href="#" class="base_item_anchor">services</a>
+						<div class="base_content_holder">
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">grievances redressal cell</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">hostel</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">libarary</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">medical services</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">national cadet cops</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">national service scheme</a>
+							</div>
+							<div class="link_holder link_holder_7">
+								<a href="#" class="main_link">welfare scheme</a>
+							</div>
+						</div>
+					</div>
+					<div class="base_item  base_item_8">
+						<a href="#" class="base_item_anchor">about us</a>
+						<div class="base_content_holder">
+							<div class="link_holder link_holder_8">
+								<a href="#" class="main_link">founder</a>
+							</div>
+							<div class="link_holder link_holder_8">
+								<a href="#" class="main_link">principal</a>
+							</div>
+							<div class="link_holder link_holder_8">
+								<a href="#" class="main_link">facts</a>
+							</div>
+							<div class="link_holder link_holder_8">
+								<a href="#" class="main_link">history</a>
+							</div>
+							<div class="link_holder link_holder_8">
+								<a href="#" class="main_link">alumni</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="base_item  base_item_9">
+						<a href="#" class="base_item_anchor">contact us</a>
+					</div>
+				</nav>
+
+			</div>
+
+		</div>
+	</header>
+	<section class="home_image_section">
+		<div class="img_holder">
+			<img src="images/crew.jpg">
+		</div>
+	</section>
+
+
+</body>
+
+</html>

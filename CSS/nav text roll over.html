@@ -1,0 +1,82 @@
+<html>
+
+<head>
+	<style type="text/css">
+		ul {
+			display: block;
+			text-align: center;
+			height: 50px;
+			padding: 0 20px;
+			border: 1px solid silver;
+			overflow: hidden;
+		}
+		
+		li {
+			float: left;
+			height: 100%;
+			margin: 0 20px;
+			color: silver;
+			box-sizing: border-box;
+		}
+		
+		ul li a {
+			display: inline-block;
+			line-height: 50px;
+			list-style: none;
+			margin-top: -50px;
+			transition: all .2s ease-out;
+			color: black;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+			font-family: cursive;
+			padding: 0px 40px;
+		}
+		
+		ul li a:hover {
+			margin-top: 0px;
+		}
+		
+		ul li a:before {
+			content: attr(data-text);
+			display: block;
+			color: #4caf58;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<ul>
+		<li>
+
+			<a href="#" data-text="home">home</a>
+		</li>
+		<li>
+
+			<a href="#" data-text="Admission">Admission</a>
+		</li>
+		<li>
+
+			<a href="#" data-text="Notificaion">Notification</a>
+		</li>
+		<li>
+
+			<a href="#" data-text="Results">Results</a>
+		</li>
+		<li>
+
+			<a href="#" data-text="About">About</a>
+		</li>
+		<li>
+
+			<a href="#" data-text="Contact Us">Contact US</a>
+		</li>
+
+	</ul>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+
+	</style>
+	<script type="text/javascript">
+		var basit = {
+			name: "basit",
+			age: 20,
+			address: "solina",
+			district: "srinagar",
+			print_details: function() {
+				alert("name =" + this.name + "\nage = " + this.age + "\naddress =" + this.address + "\ndistrict " + this.district);
+			}
+		};
+
+		alert(basit.age);
+		basit.print_details();
+		basit.pin = 200; //append
+
+		alert(basit.pin);
+		basit.full_details = function() { //append
+			this.print_details();
+		}
+		basit.full_details();
+
+	</script>
+</head>
+
+
+<body>
+	<p>all about objects</p>
+</body>
+
+</html>

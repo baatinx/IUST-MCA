@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>toggle css class via javascript</title>
+  <style type="text/css">
+    .para {
+      color: white;
+      font: normal 19px sans-serif;
+      padding: 20px 70px;
+      background-color: dodgerblue;
+      box-shadow: 0 0 10px #999;
+    }
+
+    button {
+      padding: 10px 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <p id="target_para" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <br>
+  <button type="button" data-color="red" onclick="myfunc1(this)">red</button>
+  <button type="button" data-color="blue" onclick="myfunc1(this)">blue</button>
+  <button type="button" data-color="green" onclick="myfunc1(this)">green</button>
+  <button type="button" name="button" onclick="style_reset()">reset</button>
+
+  <script type="text/javascript">
+    function myfunc1(obj) {
+      var color_code = obj.dataset.color;
+      document.getElementById('target_para').style.backgroundColor = color_code;
+    }
+
+    function style_reset() {
+      document.getElementById('target_para').removeAttribute('style');
+    }
+    /*
+    document.getElementById("MyElement").classList.add('MyClass');
+    document.getElementById("MyElement").classList.remove('MyClass');
+    if ( document.getElementById("MyElement").classList.contains('MyClass') )
+    document.getElementById("MyElement").classList.toggle('MyClass');
+  */
+  </script>
+</body>
+
+</html>

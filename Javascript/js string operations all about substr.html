@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<style type="text/css">
+
+
+	</style>
+
+	<script type="text/javascript">
+		var str1, res;
+		str1 = "apple, banana, kiwi"
+			/*
+			Extracting String Parts
+			There are 3 methods for extracting a part of a string:
+
+			1. slice(start, end) +ve,-ve start end
+			2. substring(start, end) +ve start end
+			3. substr(start, length) +ve,-ve start
+			*/
+
+		/*
+		/*
+		substr() is similar to slice().
+		The difference is that the second parameter specifies the length of the extracted part.
+		*/
+		res = str1.substr(0, 5);
+		alert(res);
+		/*
+		If the first parameter is negative, the position counts from the end of the string.
+		The second parameter can not be negative, because it defines the length.
+		If you omit the second parameter, substr() will slice out the rest of the string.
+		*/
+		res = str1.substr(-4, 4);
+		alert(res);
+
+		//If you omit the second parameter, substr() will slice out the rest of the string.
+
+		res = str1.substr(1);
+		alert(res);
+
+	</script>
+</head>
+
+<body>
+	<p>apple, banana, kiwi</p>
+</body>
+
+</html>

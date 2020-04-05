@@ -1,0 +1,55 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 5px;
+			padding: 0px;
+		}
+		
+		#bt1 {
+			background-color: #4CAF50;
+			color: white;
+			padding: 15px 32px;
+			border: 2px solid #4CAF50;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 4px;
+			position: absolute;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function init() {
+			var intrval_id, elmnt, pos, i;
+			pos = 5;
+			elmnt = document.getElementById("bt1");
+			intrval_id = setInterval(move, 5);
+
+			function move() {
+				if (pos == 150) {
+					clearInterval(intrval_id);
+				} else {
+					alert(pos);
+					pos++;
+					elmnt.style.left = pos + 'px';
+					elmnt.style.top = pos + 'px';
+					elmnt.style.rota
+				}
+			}
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<div>
+		<input type="button" id="bt1" value="click here" onclick="init();" \>
+	</div>
+
+</body>
+
+</html>

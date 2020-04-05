@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<style type="text/css">
+		#bt1 {
+			background-color: #4CAF50;
+			color: white;
+			padding: 15px 32px;
+			border: 2px solid #4CAF50;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 4px;
+			margin-top: 10px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function init() {
+			var text;
+			text = document.getElementById("p1").childNodes[0].nodeValue;
+			document.getElementById("p2").childNodes[0].nodeValue = text;
+			document.getElementById("p3").firstChild.nodeValue = text;
+			alert(document.body.innerHTML);
+			alert(document.documentElement.innerHTML);
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<p id="p1">1. click on ok button to copy the contents\para of this para into the below paras</p>
+	<p id="p2">2. second para</p>
+	<p id="p3">3. third para</p>
+	<input type="button" value="ok" onclick="init();" \>
+
+</body>
+
+</html>

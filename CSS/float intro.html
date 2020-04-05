@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		div {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+		blockquote {
+			float: right;
+			width: 300px;
+			border-top: 1px solid silver;
+			border-bottom: 1px solid silver;
+			padding: 20px;
+			margin: 10px;
+			font: bold 20px comic sans ms;
+			color: royalblue;
+		}
+		
+		header {
+			font: bold 26px comic sans ms;
+			color: black;
+			margin: 5px;
+		}
+		
+		p {
+			font: bold 16px courier new;
+			margin: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div>
+		<header>overLapping eLements <strong>z-index</strong></header>
+		<blockquote>"If you want to control which element sits on top, you can use the z-index property." </blockquote>
+		<p>When you use relative, fixed, or absolute positioning, boxes can overlap. If boxes do overlap, the elements that appear later in the HTML code sit on top of those that are earlier in the page. If you want to control which element sits on top, you can use the z-index property. Its value is a number, and the higher the number the closer that element is to the front. For example, an element with a z-index of 10 will appear over the top of one with a z-index of 5. This example looks similar to the one on page 368, but it uses relative positioning for the elements. Because the paragraphs are relatively positioned, by default they would appear over the top of the heading as the user scrolls down the page. To ensure that the element stays on top, we use the z-index property on the rule for the element. The z-index is sometimes referred to as the stacking The z-index is sometimes referred to as the stacking context (as if the blocks have been stacked on top of each other on a z axis). If you are familiar with desktop publishing packages, it is the equivalent of using the 'bring to front' and 'send to back' features. HTML code sit on top of those that are earlier in the page. If you want to control which element sits on top, you can use the z-index property. Its value is a number, and the higher the number the closer that element is to the front.</p>
+
+	</div>
+</body>
+
+</html>

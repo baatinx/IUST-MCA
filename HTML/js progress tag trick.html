@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var a = null;
+
+		function strt() {
+			a = setInterval(incr, 10);
+		}
+
+		function incr() {
+			var num;
+			num = document.getElementById('p1');
+			num.value = num.value + 1;
+			if (num.value == 300) {
+				clearInterval(a, incr);
+			}
+
+		}
+	</script>
+	<style type="text/css">
+		hr {
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+		
+		progress {
+			width: 100%;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<hr \>
+	<div>
+		<progress value="10" max="500" id="p1" \>
+	</div>
+	<hr \>
+	<input type="button" value="start effect " onclick="strt();" \>
+</body>
+
+</html>

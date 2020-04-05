@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script language="vbscript" type="text/vbscript">
+        dim a,b
+        a="mustafa basit"
+        b="ziyaan shAh"
+        var="This is VBScript Programming"
+      var1="          mathamatical"
+      var2="mathamatical           "
+      var3="            mathamatical               "
+
+        document.write("this page demonstrates the use of string functions in vbscript<br><br>")
+        document.write("A = mustafa basit and B = ziyaan shAh <br><br><hr/>")
+        document.write("<center>INSTR()</center><br>")
+        document.write("instr( a , i )  : " & instr(a,"i") & "   // i.e t at 12th postion <br>")
+        document.write("instr(1 , a , i )  : " & instr(1,a,"i") & "   // i.e equals to above statement<br> ")
+        document.write("instr( 4 , a , s )  : " & instr(4,a,"s") & "   // i.e searchs for s character but start searching from 4 character i.e it finds it here  baS<br>")
+        document.write("instr( 1 , a , s )  : " & instr(1,a,"s") & "   // i.e searchs for s character but start searching from 1 character i.e it finds it here  muS<br>")
+        document.write("instr(1 , b , A , 0 )  : " & instr(1,b,"A",0 ) & "   // i.e  Performs Binary Comparison<br> ")
+        document.write("instr(1 , b , A , 1 )  : " & instr(1,b,"A",1 ) & "   // i.e  Performs text Comparison<hr><hr > ")
+
+
+        document.write("<center>INSTRREV()</center><br>")
+        document.write("instrrev( a , i )  : " & instrrev(a,"i") & "   // i.e t at 12th postion  but start searching from right to left<hr><hr>")
+
+        document.write("lcase(a) : " & lcase(b) & " //  returns lowercase string <br>  ")
+        document.write("Ucase(a) : " & ucase(b) & " //  returns uppercase string <hr><hr> ")
+
+        document.write("left(a , 3) : " & left(a,3) & " //  returns a specified number of characters from the left side <br>")
+        document.write("left(a , 9) : " & left(a,9) & " //  returns a specified number of characters from the left side <br><br>")
+
+        document.write("right(a , 3) : " & right(a,3) & " //  returns a specified number of characters from the right side <br>")
+        document.write("right(a , 9) : " & right(a,9) & " //  returns a specified number of characters from the right side <br><br>")
+
+        document.write("mid(b , 2)" & Mid(b,2) & " // start from 2nd character and get remaining all <br />")
+        document.write("mid(b , 5 , 6) : " & Mid(b,5,6) & " // start from 5th character and get next 6 characters including 5th<br />")
+        document.write("mid(b , 2 , 3) : " & Mid(b,2,3) & " // start from 2nd character and get next 3  character<hr><hr/>")
+
+        document.write("ltrim(var1) : " & ltrim(var1) & " // removes the blank spaces that are there on the left side of the string<br>")
+        document.write("rtrim(var2) : " & rtrim(var2) & " // removes the blank spaces that are there on the right side of the string<br>")
+        document.write("trim(var3) : " & trim(var3) & " // removes the blank spaces that are there on the both side of the string<hr><hr>")
+
+        document.write("len(a)" & len(a) &" // returns the lenght of the string<br>")
+        document.write("len(b)" & len(b) &" // returns the lenght of the string<hr><hr>")
+
+        document.write("<center>This is VBScript Programming</center><br><br>")
+        document.write("Replace(var,VBScript,MS VBScript)  :  " & Replace(var,"VBScript","MS VBScript") & " S// VBScript to be replaced by MS VBScript<br><br>")
+        document.write("Replace(var,VB,vb)  :  "  & Replace(var,"VB","vb") & " // VB to be replaced by vb<br /><br>")
+        document.write(" Replace(var,is,##,5)  :  " & Replace(var,"is","##",5) & " // is replaced by ## ignores the characters before the first occurence <br /><br>")
+        document.write("Line 5: Replace(var,s,##,1,2)   :   " & Replace(var,"r","##",1,-1,1) & " // r is replaced by ## for all occurences textual comparison<br /><br>")
+        document.write(" Replace(var,is,##) :  "  & Replace(var,"is","##") & " // is replaced by #<br /><br>")
+        document.write(" Replace(var,t,##,1,-1,0) :  " & Replace(var,"t","##",1,-1,0) & " // t is replaced by ## for all occurences Binary comparison <br /><br>")
+        </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

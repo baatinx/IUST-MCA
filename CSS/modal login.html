@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .login_trigger {
+      width: 200px;
+      padding: 10px;
+      margin: 200px 600px;
+    }
+
+    form {
+      border: 1px solid red;
+      text-align: center;
+      background-color: #fefefe;
+
+    }
+
+    form img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      border: 1px solid red;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 300px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .forget {
+      list-style: none;
+    }
+
+    .forget a {
+      color: royalblue;
+      font: normal 16px sans-serif;
+      text-transform: capitalize;
+    }
+
+
+    #modal_login {
+      display: none;
+      position: fixed;
+      padding: 50px;
+      border: 1px solid green;
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      overflow: auto;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      font-size: 35px;
+      font-weight: bold;
+      color: tomato;
+      cursor: pointer;
+    }
+
+    .animate {
+      animation: animatezoom 0.6s;
+    }
+
+    @keyframes animatezoom {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+
+    }
+  </style>
+  <script type="text/javascript">
+    var a = document.getElementById('id')
+  </script>
+  <!--
+Tip: You can also use the following javascript to close the modal by clicking outside of the modal content (and not just by using the "x" or "cancel" button to close it):
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	if (event.target == modal) {
+			modal.style.display = "none";
+	}
+}
+</script>
+-->
+</head>
+
+<body>
+
+  <button class="login_trigger" type="button" name="button" onclick="document.getElementById('modal_login').style.display='Block'">log in</button>
+
+  <div id="modal_login">
+    <span class="close" onclick="document.getElementById('modal_login').style.display='none'">&times</span>
+
+    <form class="animate" action="index.html" method="post">
+      <div class="image_container">
+        <img src="images/21.jpg" alt="">
+      </div>
+      <div class="form_container">
+        <label>username</label>
+        <input type="text" name="" value="">
+        <br>
+        <label>password</label>
+        <input type="password" name="" value="">
+        <br>
+        <p>
+          <input type="checkbox" name="" value="">
+          <label>remember me</label>
+          <br><input type="submit" name="" value="submit">
+        </p>
+      </div>
+      <br>
+      <div class="bottom_container">
+        <button type="button" class="cancelbtn" onclick="document.getElementById('modal_login').style.display='none'">no, thanks</button>
+        <li class="forget"><a href="#">forget password</a></li>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

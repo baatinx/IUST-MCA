@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<style type="text/css">
+		#bt1 {
+			position: absolute;
+			left: 500px;
+			top: 30px;
+			width: 150px;
+			height: 40px;
+			line-height: 30px;
+			background-color: white;
+			border: 1px solid silver;
+			color: #0066ff;
+			font-size: 20px;
+			font-family: comic sans ms;
+			padding: 4px;
+			text-align: center;
+			border-radius: 2px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function init() {
+			document.getElementById("bt1").style.borderBottom = "red";
+			document.getElementById("bt1").style.borderBottom = "5px solid #0066ff";
+		}
+
+		function reset() {
+			document.getElementById("bt1").style.borderBottom = "1px solid silver";
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<input type="button" id="bt1" value="click here" onmouseover="init();" onmouseout="reset();">
+
+</body>
+
+</html>

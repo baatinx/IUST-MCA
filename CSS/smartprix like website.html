@@ -1,0 +1,430 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			overflow-x: hidden;
+		}
+		
+		nav {
+			color: black;
+			width: 100%;
+			height: 100px;
+			z-index: 100000;
+			font: bold 30px agency fb;
+			text-align: center;
+			line-height: 100px;
+			vertical-align: middle;
+			order: 1px solid silver;
+		}
+		
+		.big_wrapper {
+			display: block;
+			max-width: 1200px;
+			min-width: 1185px;
+			text-align: center;
+			height: auto;
+			order: 1px solid green;
+			margin: 0 auto;
+			margin-top: 50px;
+			brder: 1px solid red;
+		}
+		
+		.holder {
+			display: inline-block;
+			text-align: center;
+			height: auto;
+			order: 1px solid pink;
+			margin-bottom: 10px;
+		}
+		
+		.item {
+			background: white;
+			display: inline-block;
+			width: 370px;
+			height: 470px;
+			border: none;
+			border-right: 1px solid silver;
+			overflow: hidden;
+			text-align: center;
+			padding-right: 5px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.item3 {
+			margin: 0;
+			padding: 0;
+			border: none;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.banner {
+			display: inline-block;
+			border: none;
+			height: 240px;
+			width: 240px;
+			margin: auto;
+			margin-top: 10px;
+			position: relative;
+			border-bottom: none;
+			transition: all .2s ease-out;
+			transform-origin: center;
+			cursor: pointer;
+			background: white;
+			border: 1px solid silver;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			box-shadow: 5px 7px 10px #ddd;
+			z-index: 10;
+			order: 1px solid red;
+		}
+		
+		.banner_1 {
+			transform: rotateZ(2deg) translateY(-5px);
+		}
+		
+		.banner_2 {
+			transform: rotateZ(-1deg);
+		}
+		
+		.banner_3 {
+			transform: rotateZ(2deg) translateY(5px);
+		}
+		
+		.banner_1::after {
+			content: '@3500';
+		}
+		
+		.banner_2::after {
+			content: '@2000';
+		}
+		
+		.banner_3::after {
+			content: '@1500';
+		}
+		
+		.banner::after {
+			text-align: center;
+			line-height: 40px;
+			vertical-align: middle;
+			position: absolute;
+			order: 1px solid silver;
+			top: 0px;
+			right: 0;
+			left: 0;
+			order: 1px solid silver;
+			transform: rotateZ(90deg) translateY(-147px) translateX(99px);
+			font: bold 33px comic sans ms;
+			color: #e8442e;
+		}
+		
+		.banner_1::before {
+			content: 'wrangler wedding suit ';
+		}
+		
+		.banner_2::before {
+			content: 'endeavour ethinic wear';
+		}
+		
+		.banner_3::before {
+			content: 'all-in-one kurtis';
+		}
+		
+		.banner::before {
+			position: absolute;
+			left: -1;
+			right: -1;
+			bottom: -30px;
+			height: 30px;
+			background: white;
+			border: 1px solid silver;
+			border-top: none;
+			font: bold 30px A little sunshine;
+			color: #333;
+			line-height: 20px;
+			vertical-align: middle;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			box-shadow: 5px 7px 10px #ddd;
+			z-index: 10000;
+			text-shadow: 2px 1px 4px #bbb;
+		}
+		
+		img {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			border-radius: 1px;
+			transition: all .1s ease-out;
+			padding: 10px;
+			transition: all .3s ease-out;
+			z-index: 90000;
+		}
+		
+		.buy_button {
+			display: block;
+			font: bold 20px comic sans ms;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			vertical-align: middle;
+			text-transform: uppercase;
+			text-decoration: none;
+			background-color: white;
+			color: #444;
+			box-shadow: 2px 2px 6px silver;
+			transition: all .3s ease-in;
+			position: relative;
+			border: 1px solid silver;
+			margin-top: 15px;
+			z-index: 1;
+		}
+		
+		.buy_button::after {
+			content: "\279c";
+			position: absolute;
+			top: -1;
+			bottom: -1;
+			left: 0;
+			width: 30px;
+			background-color: transparent;
+			border: 1px solid silver;
+			transform: translateX(100px) rotateZ(180deg);
+			z-index: -1;
+			line-height: 40px;
+			vertical-align: middle;
+			transition: all .3s ease-out;
+			opacity: 0;
+			border: none;
+		}
+		
+		.buy_button:hover::after {
+			opacity: 1;
+			transform: rotateZ(0deg) translateX(150px);
+		}
+		
+		.desc {
+			borer: 1px solid red;
+			position: relative;
+			top: 50px;
+			overflow: auto;
+			padding-top: 5px;
+			border-top: 1px solid silver;
+			display: block;
+			padding: 10px 10px;
+		}
+		
+		.about {
+			list-style: none;
+			text-align: justify;
+			font: normal 15px sans-serif;
+			color: #444;
+			text-transform: capitalize;
+			text-align: justify;
+			line-height: 18px;
+		}
+		
+		.about a {
+			text-decoration: none;
+			text-transform: capitalize;
+			font: normal 14px sans-serif;
+		}
+		
+		.about a:hover {
+			color: #444;
+			text-decoration: underline;
+		}
+		
+		.heading {
+			overflow: hidden;
+			text-align: left;
+			padding: 1px 30px;
+			margin-bottom: 10px;
+			border: none;
+			border-left: 10px solid;
+		}
+		
+		.heading span {
+			display: inline-block;
+			overflow: hidden;
+			color: #333;
+			padding: 0;
+			margin: 0;
+			overflow: visible text-align: center;
+			font: bold 55px comic sans ms;
+			height: 50px;
+			line-height: 40px;
+			vertical-align: middle;
+		}
+		
+		.heading span:nth-child(1) {
+			color: royalblue;
+			transform: rotateZ(-30deg)
+		}
+		
+		.heading span:nth-child(2) {
+			color: hotpink;
+			transform: rotateZ(30deg) translateY(-10px)
+		}
+		
+		.heading span:nth-child(3) {
+			color: #e8442e;
+			transform: rotateZ(10deg)
+		}
+		
+		.heading span:nth-child(4) {
+			color: orange;
+			transform: rotateZ(280deg)
+		}
+		
+		.heading span:nth-child(5) {
+			color: #444;
+			transform: rotateZ(30deg)
+		}
+		
+		.heading span:nth-child(6) {
+			color: burlywood;
+			transform: rotateZ(-30deg);
+		}
+		
+		.heading span:nth-child(7) {
+			color: #4caf58;
+			transform: rotateZ(60deg);
+		}
+		
+		.heading a {
+			float: right;
+			text-decoration: none;
+			color: #555;
+			font: bold 20px comic sans ms;
+			border: 1px solid silver;
+			height: 40px;
+			line-height: 38px;
+			vertical-align: middle;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-radius: 4px;
+			transition: all .4s ease-out;
+			background-color: white;
+			color: #555;
+		}
+		
+		.heading a:hover {
+			background-color: silver;
+			color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<nav>this is nav</nav>
+	<div class="big_wrapper">
+		<div class="holder">
+			<div class="heading">
+				<span>w</span>
+				<span>o</span>
+				<span>m</span>
+				<span>e</span>
+				<span>n</span>
+				<span>'</span>
+				<span>s</span>
+				<a href="#">check more...</a>
+			</div>
+
+			<div class="item1 item">
+				<div class="banner banner_1" title="more details"><img src="images/20.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> pure 100% cotton wedding suit manufacutured by wrangler ,designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item2 item">
+				<div class="banner banner_2"><img src="images/21.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> all in new ethinic wear is here designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a>
+						<br \>
+						<br \>
+					</li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item3 item">
+				<div class="banner banner_3"><img src="images/14.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> kurtis manufacutured by wrangler latest design limited edition only few are left <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+		</div>
+		<div class="holder">
+
+			<div class="item1 item">
+				<div class="banner banner_1" title="more details"><img src="images/20.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> pure 100% cotton wedding suit manufacutured by wrangler ,designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item2 item">
+				<div class="banner banner_2"><img src="images/21.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> all in new ethinic wear is here designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a>
+						<br \>
+						<br \>
+					</li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item3 item">
+				<div class="banner banner_3"><img src="images/14.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> kurtis manufacutured by wrangler latest design limited edition only few are left <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+		</div>
+		<div class="holder">
+
+			<div class="item1 item">
+				<div class="banner banner_1" title="more details"><img src="images/20.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> pure 100% cotton wedding suit manufacutured by wrangler ,designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item2 item">
+				<div class="banner banner_2"><img src="images/21.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> all in new ethinic wear is here designed by kandeel balouch <strong>...</strong><a href="#"> full descriprion </a>
+						<br \>
+						<br \>
+					</li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+			<div class="item3 item">
+				<div class="banner banner_3"><img src="images/14.jpg"> </div>
+				<div class="desc">
+					<li class="about"><strong>about:</strong> kurtis manufacutured by wrangler latest design limited edition only few are left <strong>...</strong><a href="#"> full descriprion </a></li>
+					<a href="#" class="buy_button">buy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

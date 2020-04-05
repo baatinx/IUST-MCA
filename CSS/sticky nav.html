@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .main_wrapper {
+      border: 1px solid red;
+    }
+
+    .upper_nav_wrapper {
+      border: 1px solid blue;
+      color: #333;
+      font: normal 15px helvatica;
+      text-decoration: underline;
+      text-transform: uppercase;
+      height: 150px;
+      text-align: center;
+
+    }
+
+
+    .nav_wrapper {
+      overflow: auto;
+      border: 1px solid green;
+      background-color: #eee;
+      padding-left: 20px;
+      height: 50px;
+
+    }
+
+    .nav_wrapper a {
+      float: left;
+      font: bold 19px sans-serif;
+      padding: 10px;
+    }
+
+    .content_wrapper {
+      height: 900px;
+      text-align: center;
+      font: normal 30px sans-serif;
+      border: 1px solid orange;
+      padding-top: 20px;
+    }
+
+    .footer_wrapper {
+      border: 1px solid green;
+      font: bold 40px sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .sticky+.content_wrapper {
+      padding-top: 70px;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body onscroll="myfunc()">
+  <div class="main_wrapper">
+    <div class="upper_nav_wrapper">
+      upper nav content goes here
+    </div>
+    <div id="navbar" class="nav_wrapper">
+      <a href="#">home</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">addmission</a>
+      <a href="#">results</a>
+      <a href="#">downloads</a>
+    </div>
+    <div class="content_wrapper">
+      main content of the page goes here
+    </div>
+    <div class="footer_wrapper">
+      footer of the page
+    </div>
+  </div>
+  <script type="text/javascript">
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myfunc() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+  </script>
+</body>
+
+</html>

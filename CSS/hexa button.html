@@ -1,0 +1,63 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: 0;
+		}
+		
+		.hexa {
+			display: inline-block;
+			border: none;
+			position: relative;
+			text-align: center;
+			margin: 100px 300px;
+			font: bold 40px agency fb;
+			color: white;
+		}
+		
+		.hexa::before,
+		.hexa::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -5px;
+			/* left must  be equal to border width*/
+			z-index: -1;
+		}
+		
+		.hexa::before {
+			transform: rotate(60deg);
+		}
+		
+		.hexa::after {
+			transform: rotate(-60deg);
+		}
+		
+		.hexa,
+		.hexa::before,
+		.hexa::after {
+			box-sizing: border-box;
+			width: 256px;
+			height: 148px;
+			background: #333;
+			border-left: 5px solid #333;
+			border-right: 5px solid #333;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<button class="hexa">css3 button</button>
+
+</body>
+
+</html>

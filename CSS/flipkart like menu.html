@@ -1,0 +1,471 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font: bold 20px agency fb;
+		}
+		
+		P,
+		img {
+			float: left;
+		}
+		
+		header {
+			display: block;
+			height: 50px;
+			border: 1px solid red;
+		}
+		
+		header a {
+			text-decoration: none;
+			color: #e8442e;
+			font: bold 40px agency fb;
+		}
+		
+		nav {
+			border: none;
+			display: block;
+			width: 100%;
+			height: 30px;
+			margin: auto;
+			background-color: #e8442e;
+		}
+		
+		nav button {
+			outline: none;
+		}
+		
+		.wrapper {
+			display: inline-block;
+			border: none;
+			width: auto;
+			height: 30px;
+			position: relative;
+			left: 200px;
+			float: left;
+			border: none;
+		}
+		
+		.search_Section {
+			display: inline-block;
+			float: right;
+			margin-right: 150px;
+			height: 30px;
+		}
+		
+		::-webkit-input-placeholder {
+			color: white;
+		}
+		
+		.txtsearch {
+			background-color: #e8442e;
+			display: inline-block;
+			border: none;
+			height: 100%;
+			outline: none;
+			color: white;
+			width: 55px;
+			float: left;
+		}
+		
+		.txtsearch:focus {
+			width: 150px;
+		}
+		
+		.search_button {
+			position: relative;
+			text-decoration: none;
+			color: white;
+			display: inline-block;
+			width: 30px;
+			height: 100%;
+			float: left;
+			border: none;
+		}
+		
+		.search_button::after {
+			content: "\279c";
+			position: absolute;
+			top: 0;
+			left: 0px;
+			right: 0;
+			bottom: 0;
+			border: none;
+			border-radius: 50%;
+			text-align: center;
+			background-color: white;
+			color: #e8442e;
+			transform: rotate(180deg);
+			transition: all .2s ease-out;
+		}
+		
+		.search_button:hover::after {
+			color: #e8442e;
+			transform: rotateZ(0deg);
+		}
+		
+		.show {
+			display: block;
+			border: none;
+			width: 100%;
+			height: 100%;
+			padding: 0 20px;
+			background-color: transparent;
+			color: white;
+			text-transform: capitalize;
+			font: bold 19px agency fb;
+			float: left;
+			cursor: pointer;
+			borde: 1px solid green;
+			transition: all .2s ease-in;
+		}
+		
+		.show:hover {
+			background-color: #f29386;
+		}
+		
+		.content {
+			display: none;
+			position: absolute;
+			border: none;
+			top: 30px;
+			background-color: rgba(255, 255, 255, 0.80);
+		}
+		
+		.section_1_content {
+			width: 890px;
+			height: 425px;
+			/* 40 + 5 for heading  (30+3)*10 for items 30+5 for last  and at last content bottom border 5px  
+			ie 45+330+35+5+(extra 10)=425;
+			*/
+			box-shadow: 4px 5px 10px #ddd;
+			overflow: hidden;
+			border-bottom: 10px solid #e8442e;
+		}
+		
+		.content .innermost {
+			float: left;
+			display: block;
+			width: 180px;
+			height: 100%;
+			background-color: transparent;
+			overflow: hidden;
+		}
+		
+		.content .last_div {
+			width: 170px;
+			/*because of end divs' right space*/
+		}
+		
+		.wrapper:hover .content {
+			display: block;
+		}
+		
+		.content .heading,
+		.content .last {
+			display: inline;
+			float: left;
+			clear: both;
+			border: none;
+		}
+		
+		.content .heading {
+			width: 170px;
+			height: 40px;
+			background-color: #e8442e;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			margin-bottom: 5px;
+			font: bold 25px agency fb;
+		}
+		
+		.content .last {
+			width: 120px;
+			height: 30px;
+			background: white;
+			color: #222;
+			box-shadow: 2px 4px 5px #eee;
+			cursor: pointer;
+			margin-bottom: 5px;
+			font: bold 22px agency fb;
+		}
+		
+		.content .item {
+			width: 150px;
+			height: 30px;
+			float: left;
+			clear: both;
+			font: bold 20px agency fb;
+			color: black;
+			cursor: pointer;
+			text-align: center;
+			text-transform: capitalize;
+			transition: all .3s ease-out;
+			margin-left: 3px;
+			margin-right: 3px;
+			margin-bottom: 3px;
+			box-shadow: 2px 4px 5px #eee;
+			background-color: white;
+			z-index: 1;
+			border: none;
+			position: relative;
+			color: #555;
+			box-sizing: padding-box;
+			text-decoration: none;
+		}
+		
+		.content .item::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0px;
+			bottom: 0;
+			width: 10px;
+			background-color: white;
+			z-index: -1;
+			transition: all .2s ease-out;
+		}
+		
+		.content .item:hover {
+			transform: translateX(15px);
+			color: #222;
+		}
+		
+		.content .item:hover::before {
+			background-color: #e8442e;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+
+	<header>
+		<a href="#">snapdeal</a>
+	</header>
+	<nav>
+		<section class="section_1 wrapper">
+			<button class="show">eletronics</button>
+			<section class="section_1_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+				<div class="innermost_content_one innermost">
+					<button class="heading">laptops</button>
+					<button class="item">popular</button>
+					<button class="item">hp</button>
+					<button class="item">dell</button>
+					<button class="item">sony</button>
+					<button class="item">lenovo</button>
+					<button class="item">microsoft</button>
+					<button class="item">acer</button>
+					<button class="item">micromax</button>
+					<button class="item">htc</button>
+					<button class="item">svmsung</button>
+					<button class="last">see all ...</button>
+				</div>
+				<div class="innermost_content_one innermost">
+					<button class="heading">accessiores</button>
+					<button class="item">keyboards</button>
+					<button class="item">mouse</button>
+					<button class="item">pendrives</button>
+					<button class="item">cables</button>
+					<button class="item">ram</button>
+					<button class="item">harddrive</button>
+					<button class="item">sleevs</button>
+					<button class="item">displays</button>
+					<button class="item">graphics cards</button>
+					<button class="item">sound cards</button>
+					<button class="last">see all ...</button>
+				</div>
+				<div class="innermost_content_one innermost">
+					<button class="heading">hardware</button>
+					<button class="item">printers</button>
+					<button class="item">displays</button>
+					<button class="item">projectors</button>
+					<button class="item">routers</button>
+					<button class="item">dongles</button>
+					<button class="item">hubs</button>
+					<button class="item">lans</button>
+					<button class="item">charger</button>
+					<button class="item">cpu</button>
+					<button class="item">batteries</button>
+					<button class="last">see all ...</button>
+				</div>
+				<div class="innermost_content_one innermost last_div">
+					<button class="heading">software</button>
+					<button class="item">popular</button>
+					<button class="item">anitvirus</button>
+					<button class="item">games</button>
+					<button class="item">photoshop</button>
+					<button class="item">media playes</button>
+					<button class="item">broswers</button>
+					<button class="item">utility</button>
+					<button class="item">packages</button>
+					<button class="item">sql server 2015</button>
+					<button class="item">oracle 10G</button>
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="section_2 wrapper">
+			<button class="show">men's</button>
+			<section class="section_2_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+					<button class="last">see all ...</button>
+				</div>
+
+			</section>
+		</section>
+		<section class="section_3 wrapper">
+			<button class="show">women's</button>
+			<section class="section_3_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="section_4  wrapper">
+			<button class="show">kids</button>
+			<section class="section_4_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="section_5  wrapper">
+			<button class="show">books</button>
+			<section class="section_5_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="section_6  wrapper">
+			<button class="show">stationery</button>
+			<section class="section_6_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="section_7 wrapper ">
+			<button class="show">toys</button>
+			<section class="section_7_content content">
+				<div class="innermost_content_one innermost">
+					<button class="heading">phones</button>
+					<button class="item">popular</button>
+					<button class="item">micromax</button>
+					<button class="item">svmsung</button>
+					<button class="item">motorola</button>
+					<button class="item">lenove</button>
+					<button class="item">sony</button>
+					<button class="item">blackbery</button>
+					<button class="item">microsoft</button>
+					<button class="item">nokia</button>
+					<a href="#" class="item">redmi</a>
+
+					<button class="last">see all ...</button>
+				</div>
+			</section>
+		</section>
+		<section class="search_section">
+			<input type="text" class="txtsearch" spellcheck="false" placeholder="search" \>
+			<a href="https//:www.google.co.in" class="search_button" title="Click to search ! "></a>
+		</section>
+
+	</nav>
+
+	<p>dkfhfh gfjh dhgf</p>
+	<img src="images/best.jpg">
+	<button style="width= 300px;">djfhj jkdfh kj</button>
+	<im src="images/best2.jpg" height=150px;>
+		<p>dkljf dkjlkdjlkj kldj gkldj kjdk gkjdkg kjd kgjkdjgkjdkfjkdjghdghdhgkj kjdig i</p>
+		<p>dkljf dkjlkdjlkj kldj gkldj kjdk gkjdkg kjd kgjkdjgkjdkfjkdjghdghdhgkj kjdig i</p>
+		jkdjgkjdkfjkdjghdghdhgkj kjdig i</p>
+		<p>dkljf dkjlkdjlkj kldj gkldj kjdk gkjdkg kjd kgjkdjgkjdkfjkdjghdghdhgkj kjdig i</p>
+		<img src="images/best.jpg"><img src="images/best2.jpg">
+</body>
+
+</html>

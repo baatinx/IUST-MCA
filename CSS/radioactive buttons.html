@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<style type="text/css">
+		div {
+			position: relative;
+			top: 100px;
+			left: 350px;
+		}
+		
+		body {
+			background-color: #333;
+		}
+		
+		.button a {
+			display: block;
+			height: 50px;
+			width: 200px;
+			background-color: #749a02;
+			color: white;
+			font: 17px comic sans ms;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 50px;
+			animation-name: greenpluse;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+		
+		@-webkit-keyframes greenpluse {
+			from {
+				background-color: #749a02;
+				box-shadow: 0 0 9px #333;
+			}
+			50% {
+				background-color: #91bd09;
+				box-shadow: 0 0 18px #91bd09
+			}
+			to {
+				background-color: #749a02;
+				box-shadow: 0 0 9px #333;
+			}
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="button">
+		<a href="#">Download</a>
+
+	</div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		var id1 = document.getElementById("txt1");
+		var leng = 250;
+		var i = leng;
+		var strtintrvl = null;
+		var stpintrvl = null;
+
+		function start() {
+			clearInterval(stpintrvl);
+			strtintrvl = setInterval(on, 2);
+		}
+
+		function on() {
+
+			id1 = document.getElementById("txt1");
+			i = i + 3;
+			id1.style.width = i;
+			if (i > 500)
+				clearInterval(strtintrvl);
+		}
+
+		function stop() {
+			clearInterval(strtintrvl);
+			stpintrvl = setInterval(off, 2);
+		}
+
+		function off() {
+			id1 = document.getElementById("txt1");
+			i = i - 3;
+			id1.style.width = i;
+			if (i < leng)
+				clearInterval(stpintrvl);
+		}
+
+	</script>
+	<style type="text/css">
+		#txt1 {
+			position: relative;
+			left: 400px;
+			width: 250px;
+			height: 30px;
+			border: 1px solid silver;
+			border-radius: 3px;
+			position: absolute;
+			top: 50px;
+			left: 600px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<input type="text" id="txt1" placeholder="search for keyword ........." onfocus="start()" onblur="stop();" onmouseover="start();" onmouseout="stop();" \>
+</body>
+
+</html>

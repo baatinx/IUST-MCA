@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css 3</title>
+	<style type="text/css">
+	p.red
+	{
+		color: red;
+	}
+	h2.red
+	{
+		color: red;
+		text-decoration: underline;
+	}
+    a > p
+	{
+		color: red;
+	}
+	
+	p[name]         
+	{
+		color: green;   
+		text-decoration: line-through;
+	}
+	p[name="pink1"]
+	{
+		color: pink;
+
+
+	}
+	p[name^=basit]
+	{
+		font-size: 40px;
+		color: orange;
+	}
+	p[name$=basit]
+	{
+		font-size: 40px;
+		color: grey;
+	}
+/*	p[name*=basit] 
+	{
+		font-size: 40px;
+		color: yellow;
+	}   this style is appplied to all id  in wich basit either in middle,start or at the end   */
+	</style>
+
+</head>
+<body>
+<p class="red">this paragraph belongs to red class   -- p.red{ .....}</p> 
+
+<h2 class="red">this header also belongs to red class   -- h2.red {...}</h2>
+
+<p><a href="kjfkjdkfjdkj">all anchor tags get affected which is in paragraph or all those anchors tags get affected which are childern of paragraph i.e  a > p  all anchor tags which is in paragraph</a> </p>
+
+<p name="it_is_not_necessary_here">this paragraph belongs to that class which has name attribute mentioned regradless of there value ie </p>
+
+<p name="pink1">this paragraph belongs to that class which has specific identification ie all those paragraph gets affected </p>
+
+<p name="basit_then_text">basit is in start</p>
+<p name=text_then_basit>basit is in end</p>
+<p name="middle_basit_text">any where basit is </p>
+
+</body>
+</html>

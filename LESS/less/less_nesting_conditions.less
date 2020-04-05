@@ -1,0 +1,21 @@
+// "out": "../css/nesting_conditions.css"
+
+.big_wrapper {
+  border: 1px solid red;
+
+  .container {
+    background-color: green;
+    display: inline-block;
+    width: 400px;
+    margin: auto;
+    @media screen {
+       @media (max-width: 1230px){
+        background-color: blue;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+  }
+}

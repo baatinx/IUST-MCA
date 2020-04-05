@@ -1,0 +1,82 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		var id1 = null;
+		var i = 150;
+		var strtintrvl = null;
+		var reset = null;
+
+		function init_on() {
+			strtintrvl = setInterval(strt, 1);
+			id1 = document.getElementById("txt1");
+			reset = 150;
+		}
+
+		function strt() {
+			i = i + 3;
+			id1.style.width = i;
+			if (i > 500) {
+				clearInterval(strtintrvl);
+			}
+		}
+
+		function init_off() {
+			strtintrvl = setInterval(stp, 1)
+			id1 = document.getElementById("txt1");
+		}
+
+		function stp() {
+			i = i - 5;
+			id1.style.width = i;
+			if (i < 150) {
+				clearInterval(strtintrvl);
+			}
+		}
+
+		function on() {
+			document.getElementById("bt2").focus();
+		}
+
+		function off() {
+			document.getElementById("bt2").blur();
+		}
+
+	</script>
+	<style type="text/css">
+		#txt1 {
+			position: relative;
+			left: 400px;
+			width: 250px;
+			height: 30px;
+			border: 1px solid silver;
+			border-radius: 3px;
+			position: absolute;
+			top: 50px;
+			left: 600px;
+		}
+		
+		#bt2 {
+			height: 50px;
+			width: 100px;
+			border: 1px solid silver;
+			background-color: white;
+			font-family: comic sans ms;
+			font-size: 15px;
+			color: silver;
+			border-radius: 4px;
+			position: absolute;
+			top: 50px;
+			left: 300px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<input type="text" id="txt1" placeholder="search for keyword" onfocus="init_on();" onblur="init_off();" onmouseover="init_on();" onmouseout="init_off();" \>
+	<input type="button" value="Downloads" id="bt2" onmouseover="on();" onmouseout="off();" </body>
+	<div></div>
+</body>
+
+</html>

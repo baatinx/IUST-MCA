@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		button {
+			display: block;
+			position: relative;
+			top: 100px;
+			left: 200px;
+			width: 100px;
+			height: 100px;
+			border: none;
+			float: left;
+			background-color: white;
+			overflow: visible;
+			font: bold 20px agency fb;
+			color: #e8442e;
+			box-sizing: border-box;
+			transition: all .2s ease-out;
+			text-transform: uppercase;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			background: silver;
+			color: yellow;
+			border-radius: 50%;
+			transform: rotateZ(0deg);
+			box-sizing: border-box;
+		}
+		
+		button::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			border: none;
+			background-color: transparent;
+			border: 3px solid silver;
+			width: 100px;
+			height: 100px;
+			box-sizing: border-box;
+			border-radius: 50%;
+			transition: all .4s ease-out;
+			transform: scale(.9);
+			z-index: -1;
+		}
+		
+		button:hover::before {
+			transform: scale(1.1);
+		}
+		
+		button:hover {
+			transform: rotate(30deg);
+		}
+		
+		h2 {
+			background-color: red;
+			transition: all 4s ease;
+		}
+		
+		h2.e1 {
+			background-color: aqua;
+		}
+		
+		.a1 {
+			margin: 200 500px;
+			display: inline-block;
+			background: #eee;
+			color: #999;
+			font: bold 11px sans-serif;
+			padding: 5px 10px;
+			border: none;
+			text-decoration: none;
+			text-transform: capitalize;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			transition: all .2s ease;
+		}
+		
+		.a1::before {
+			content: '';
+			display: inline-block;
+			background: white;
+			padding: 5px;
+			border-radius: 50%;
+			margin-right: 5px;
+		}
+		
+		.a1:hover {
+			text-decoration: underline;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<button onclick="the();">click here</button>
+	<h2 class="change">kdjfkdfhj</h2>
+	<script>
+		function the() {
+			document.querySelector('h2').className = 'e1';
+		}
+
+	</script>
+	<a href="#" class="a1">log in</a>
+
+</body>
+
+</html>

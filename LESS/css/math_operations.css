@@ -1,0 +1,15 @@
+.small_bt {
+  padding: 10px;
+  background-color: #a3a3a3;
+  color: white;
+}
+.medium_bt {
+  padding: 15px;
+  background-color: #444;
+  color: white;
+}
+.big_bt {
+  padding: 20px;
+  background-color: #222222;
+  color: white;
+}

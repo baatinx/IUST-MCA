@@ -1,0 +1,179 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		div {
+			box-sizing: border-box;
+			transform-style: preserve-3d;
+		}
+		
+		.section1 {
+			width: 100%;
+			background-color: white;
+		}
+		
+		.big_wrapper {
+			display: block;
+			width: 1000px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.small_wrapper {
+			display: inline-block;
+			padding: 50px 10px;
+		}
+		
+		.content {
+			display: inline-block;
+		}
+		
+		button {
+			display: block;
+			position: relative;
+			width: 130px;
+			height: 50px;
+			border: none;
+			z-index: 1;
+			float: left;
+			background-color: white;
+			overflow: hidden;
+			font: bold 20px agency fb;
+			color: #e8442e;
+			transition: all .3s linear;
+			transition-delay: .2s;
+			box-shadow: 1px 1px 3px silver;
+			box-sizing: border-box;
+			margin-right: 50px;
+			cursor: pointer;
+		}
+		
+		button::before {
+			content: '';
+			position: absolute;
+			display: block;
+			background-color: #e8422e;
+			border: none;
+			z-index: -1;
+			opacity: 0;
+			transition: all .3s ease-out;
+		}
+		
+		.left_background::before {
+			top: 0px;
+			bottom: 0px;
+			left: 130px;
+			right: 0px;
+		}
+		
+		.right_background::before {
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 130px;
+		}
+		
+		.top_background::before {
+			top: 50px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+		}
+		
+		.bottom_background::before {
+			top: 0px;
+			bottom: 50px;
+			left: 0px;
+			right: 0px;
+		}
+		
+		button:hover::before {
+			opacity: 1;
+		}
+		
+		.left_background:hover::before {
+			left: 0px;
+		}
+		
+		.right_background:hover::before {
+			right: 0px;
+		}
+		
+		.top_background:hover::before {
+			top: 0px;
+		}
+		
+		.bottom_background:hover::before {
+			bottom: 0px;
+		}
+		
+		.top_background:hover,
+		.bottom_background:hover,
+		.left_background:hover,
+		.right_background:hover {
+			color: white;
+		}
+		
+		.bottom_border::before,
+		.top_border::before {
+			height: 3px;
+			background: #e8422e;
+			transition: all .15s ease_out;
+		}
+		
+		.bottom_border::before {
+			left: 0;
+			right: 130px;
+			bottom: 0;
+		}
+		
+		.bottom_border:hover::before,
+		.top_border:hover::before {
+			right: 0px;
+		}
+		
+		.top_border::before {
+			left: 0;
+			right: 130px;
+			top: 0;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<section class="section1">
+		<div class="big_wrapper">
+			<div class="small_wrapper">
+				<div class="content">
+					<button class=" button top_background">top button</button>
+					<button class=" button bottom_background">bottom button</button>
+					<button class=" button left_background">left button</button>
+					<button class=" button right_background">right button</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section1">
+		<div class="big_wrapper">
+			<div class="small_wrapper">
+				<div class="content">
+					<button class=" button bottom_border">bottom button</button>
+					<button class=" button top_border">top button</button>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

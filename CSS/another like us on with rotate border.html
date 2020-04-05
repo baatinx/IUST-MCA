@@ -1,0 +1,85 @@
+<html>
+
+<head>
+	<style type="text/css">
+		.wrapper {
+			display: inline-block;
+			position: relative;
+			left: 300px;
+			z-index: 10;
+			width: 102px;
+			height: 102px;
+			overflow: hidden;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0px;
+		}
+
+		.wrapper button {
+			display: block;
+			position: relative;
+			background: white;
+			color: white;
+			border: 5px solid;
+			border-right-color: silver;
+			border-top-color: silver;
+			border-left-color: royalblue;
+			border-bottom-color: royalblue;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			box-sizing: border-box;
+			font: bold 17px comic sans ms;
+			padding: 30px;
+			margin: 0px;
+			outline: none;
+			cursor: pointer;
+			transition: all .4s ease-out;
+		}
+
+		span {
+			display: block;
+			width: 100px;
+			height: 100px;
+			position: relative;
+			top: -100px;
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+			line-height: 100px;
+			font-family: comic sans ms;
+			font-size: 18px;
+			color: black;
+			transition: all .4s ease;
+		}
+
+		.wrapper:hover .bt1 {
+			transform: scale(.8) rotate(360deg);
+		}
+
+		.wrapper:hover span {
+			transform: scale(.8);
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="load_screen"><img src="../pictures/loader.gif" id="loading" /> </div>
+
+	<div class="wrapper">
+		<button class="bt1"></button>
+		<span>Facebook</span>
+	</div>
+	<div class="wrapper">
+		<button class="bt1"></button>
+		<span>Twitter</span>
+	</div>
+	<div class="wrapper">
+		<button class="bt1"></button>
+		<span>Youtube</span>
+	</div>
+</body>
+
+</html>

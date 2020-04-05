@@ -1,0 +1,10 @@
+var path = require('path');
+var pathToImages = 'basit//projects/resources\\images//pic.png';
+console.log('provided path');
+console.log(pathToImages);
+pathToImages = path.normalize(pathToImages);
+console.log('normalised path');
+console.log(pathToImages);
+console.log('dirname -> ' + path.dirname(pathToImages));
+console.log('basename -> ' + path.basename(pathToImages));
+console.log('extension -> ' + path.extname(pathToImages));

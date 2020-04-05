@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		section {
+			display: block;
+			text-align: center;
+			max-width: 600px;
+			margin: auto;
+			border: 1px solid silver;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		
+		img {
+			border: 1px solid silver;
+			box-sizing: border-box;
+			padding: 1%;
+			width: 49%;
+			height: auto;
+			box-shadow: 1px 2px 5px #ddd;
+			cursor: pointer;
+		}
+		
+		img.trigger {
+			animation-name: jump;
+			animation-duration: .1s;
+		}
+		
+		.three {
+			width: 99%;
+			height: auto;
+		}
+		
+		@keyframes jump {
+			from {
+				transform: scale(1.01111);
+			}
+			to {
+				transform: scale(1);
+			}
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<section>
+		<img onmouseover="fire();" class="one" alt="banner" src="images/best.jpg">
+		<img class="two" src="images/4.jpg">
+		<img class="three" src="images/best2.jpg">
+	</section>
+	<script type="text/javascript">
+		function fire() {
+			document.querySelector('img').className = 'trigger';
+
+		}
+
+	</script>
+</body>
+
+</html>

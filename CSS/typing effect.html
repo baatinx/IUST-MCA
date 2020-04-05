@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <p data-text="Learn how to create a typing effect with JavaScript." id="target_para"></p>
+  <button type="button" name="button" onclick="myfunc1();">typing effect</button>
+  <script type="text/javascript">
+    var i = 0;
+    var element = document.getElementById('target_para');
+    var text = element.dataset.text;
+    var speed = 50;
+
+    function myfunc1() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(myfunc1, speed);
+      }
+
+
+    }
+  </script>
+
+</body>
+
+</html>

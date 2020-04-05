@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<script type="application/javascript">
+		function drawArc() {
+			var canvas = document.getElementById('packt');
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.arc(75, 75, 50, 0, Math.PI * 2, true);
+			context.moveTo(110, 75);
+			context.arc(75, 75, 35, 0, Math.PI * 2, false);
+			context.stroke();
+			context.fill();
+		}
+
+	</script>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<canvas id="packt" width="150" height="150"></canvas>
+	<button onclick="drawArc();">kdjfjj</button>
+</body>
+
+</html>

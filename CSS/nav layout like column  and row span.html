@@ -1,0 +1,258 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.big_wrapper {
+			display: block;
+			width: 100%;
+			overflow-x: hidden;
+			background: white;
+			box-shadow: 0 2px 15px #ddd;
+		}
+		
+		.small_wrapper {
+			display: block;
+			width: 1200px;
+			height: 70px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		/*outer and inner wrapper*/
+		
+		.logo_container {
+			display: block;
+			width: 200px;
+			height: 70px;
+			float: left;
+		}
+		
+		.side_container {
+			float: left;
+			width: 1000px;
+			height: 70px;
+		}
+		/*main two containers */
+		
+		.logo_container img {
+			width: 100%;
+			height: auto;
+		}
+		/*set left containers img*/
+		
+		.top_line {
+			display: block;
+			width: 100%;
+			height: 20px;
+			overflow: hidden;
+		}
+		
+		.top_anchor_holder {
+			display: block;
+			border: none;
+			width: auto;
+			float: right;
+			height: 20px;
+			overflow: hidden;
+		}
+		
+		.top_anchor_holder li {
+			list-style: none;
+			display: inline-block;
+			float: left;
+			height: 20px;
+		}
+		
+		.top_anchor_holder li a {
+			float: left;
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #777;
+			font: bold 11px sans-serif;
+			padding-left: 10px;
+			padding-right: 15px;
+			height: 20px;
+			line-height: 20px;
+			vertical-align: middle;
+		}
+		
+		.top_anchor_holder li:not(:first-child) a {
+			border-lef: 1px solid #999;
+		}
+		
+		.top_anchor_holder li a::before {
+			content: '\303A';
+			position: absolute;
+			left: 0;
+			transition: all .4s ease-out
+		}
+		
+		.top_anchor_holder li a:hover::before {
+			animation-name: show_hide;
+			animation-duration: .4s;
+		}
+		
+		@keyframes show_hide {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		.top_anchor_holder li a:hover {
+			text-decoration: underline;
+		}
+		/*all about top line and its content*/
+		
+		.bottom_line {
+			display: block;
+			overflow: auto;
+			width: 100%;
+			height: 50px;
+			overflow: hidden;
+		}
+		
+		.main_links_holder {
+			display: inline-block;
+			overflow: hidden;
+			margin-left: 50px;
+			height: 50px;
+		}
+		
+		.bottom_line li {
+			display: inline-block;
+			border: none;
+			list-style: none;
+			float: left;
+			height: 50px;
+		}
+		
+		.bottom_line li a {
+			position: relative;
+			display: inline-block;
+			width: auto;
+			font: bold 11px sans-serif;
+			color: #666;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 25px;
+			padding-right: 25px;
+			text-decoration: none;
+			text-transform: capitalize;
+			transition: all .3s ease-out;
+			vertical-align: middle;
+		}
+		
+		.bottom_line li a::before {
+			content: '\303A';
+			position: absolute;
+			left: 12px;
+		}
+		
+		.bottom_line li a::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			transition: all .2s ease-out;
+			;
+		}
+		
+		.bottom_line li:nth-child(1) a::after {
+			background: red;
+		}
+		
+		.bottom_line li:nth-child(2) a::after {
+			background: seagreen;
+		}
+		
+		.bottom_line li:nth-child(3) a::after {
+			background: hotpink;
+		}
+		
+		.bottom_line li:nth-child(4) a::after {
+			background: royalblue;
+		}
+		
+		.bottom_line li:nth-child(5) a::after {
+			background: dodgerblue;
+		}
+		
+		.bottom_line li:nth-child(6) a::after {
+			background: orangered;
+		}
+		
+		.bottom_line li:nth-child(7) a::after {
+			background: forestgreen
+		}
+		
+		.bottom_line li:nth-child(8) a::after {
+			background-color: coral;
+		}
+		
+		.bottom_line li a:not(.active)::after {
+			bottom: -4px;
+		}
+		
+		.bottom_line li .active::after {
+			bottom: 0px !important;
+		}
+		
+		.bottom_line li a:hover:not(.active)::after {
+			bottom: 0px;
+		}
+		/*all about bottom line and its content*/
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="big_wrapper">
+		<div class="small_wrapper">
+			<a href="#" class="logo_container">
+				<img src="images/windows%20ten%20logo.png">
+			</a>
+			<div class="side_container">
+				<div class="top_line">
+					<div class="top_anchor_holder">
+						<li><a href="#"> site map</a></li>
+						<li><a href="#"> download</a></li>
+						<li><a href="#"> sign up</a></li>
+						<li><a href="#"> sign in</a></li>
+					</div>
+				</div>
+				<div class="bottom_line">
+					<div class="main_links_holder">
+						<li><a href="#">home</a></li>
+						<li><a href="#">adminstration</a></li>
+						<li><a href="#">academics</a></li>
+						<li><a href="#">notification</a></li>
+						<li><a class="active" href="#">examination</a></li>
+						<li><a href="#">results</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

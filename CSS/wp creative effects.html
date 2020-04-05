@@ -1,0 +1,214 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		button {
+			padding: 20 30px;
+			color: white;
+			background-color: #e8442e;
+			font: bold 17px agency fb;
+			transition: all .4s ease-out;
+			width: 300px;
+			height: 100px;
+			transition: all .4s ease-out;
+			text-transform: uppercase;
+		}
+		
+		.inset {
+			border: none;
+			display: inline-block;
+		}
+		
+		.inset:hover {
+			box-shadow: inset 0 0 0 10px #444;
+		}
+		
+		.outline_bt {
+			border: none;
+			position: relative;
+		}
+		
+		.outline_bt::before {
+			content: '';
+			border: 4px solid #e8442e;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			transition: all .4s ease-out;
+		}
+		
+		.outline_bt:hover::before {
+			left: -7px;
+			right: -7px;
+			top: -7px;
+			bottom: -7px;
+		}
+		
+		.bg_transition {
+			border: none;
+			position: relative;
+			overflow: hidden;
+			transform: translateZ(0);
+		}
+		
+		.bg_transition::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background-color: #444;
+			border-radius: 100%;
+			transform: scale(0);
+			transition: all .3s ease-out;
+			z-index: -1;
+		}
+		
+		.bg_transition:hover::before {
+			transform: scale(2);
+		}
+		
+		.underline {
+			position: relative;
+			border: none;
+			overflow: hidden;
+			transform: translateZ(0);
+		}
+		
+		.underline::before {
+			content: '';
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			height: 5px;
+			background-color: #444;
+			transition: all .3s ease;
+			transform: translateY(5px);
+			z-index: -1;
+		}
+		
+		.underline:hover::before {
+			transform: translateY(0px);
+		}
+		
+		.overline {
+			position: relative;
+			border: none;
+			overflow: hidden;
+			transform: translateZ(0);
+		}
+		
+		.overline::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			height: 5px;
+			background-color: #444;
+			transition: all .3s ease-out;
+			transform: translateY(-5px);
+			z-index: -1;
+		}
+		
+		.overline:hover::before {
+			transform: translateY(0px);
+		}
+		
+		.translate {
+			position: relative;
+			overflow: hidden;
+			border: none;
+			transform: translateZ(0);
+		}
+		
+		.translate::before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			background-color: #444;
+			z-index: -1;
+			transition: all .4s ease-out;
+		}
+		
+		.top:hover::before {
+			transform: scale(0.7) translateY(-100%);
+		}
+		
+		.bottom:hover::before {
+			transform: scale(0.7) translateY(100%);
+		}
+		
+		.right:hover::before {
+			transform: scale(0.95, 0.8) translateX(-100%);
+		}
+		
+		.left:hover::before {
+			transform: scale(0.95, 0.8) translateX(100%);
+		}
+		
+		.center:hover::before {
+			transform: scale(0.8);
+		}
+		
+		.scale_center:hover::before {
+			transform: rotate(90deg) scale(0);
+		}
+		
+		.scale_top:hover::before {
+			margin-bottom: 50%;
+			transform: scale(0);
+		}
+		
+		.scale_bottom:hover::before {
+			margin-top: 50%;
+			transform: scale(0);
+		}
+		
+		.scale_left:hover::before {
+			margin-left: 100%;
+			transform: scale(0);
+		}
+		
+		.scale_right:hover::before {
+			margin-right: 100%;
+			transform: scale(0);
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<button class="inset">inset border</button>
+	<button class="outline_bt">outline border</button>
+	<button class="bg_transition">bg tranisition</button>
+	<button class="underline">underline border</button>
+	<hr \>
+	<button class="overline">overline border</button>
+	<button class="translate top">translate top</button>
+	<button class="translate bottom">translate bottom</button>
+	<button class="translate right">translate left</button>
+	<hr \>
+	<button class="translate left">translate right</button>
+	<button class="translate center">translate center</button>
+	<button class="translate scale_center">center scale</button>
+	<button class="translate scale_top">top scale</button>
+	<button class="translate scale_bottom">bottom scale</button>
+	<button class="translate scale_left">left scale</button>
+	<button class="translate scale_right">right scale</button>
+	<hr \>
+
+</body>
+
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		var i = 0;
+
+		function print() {
+			i++;
+			document.write(i + "    ");
+			if (i == 10) {
+				clearInterval(a);
+				document.write("stop")
+			}
+		}
+		var a = setInterval(print, 400);
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

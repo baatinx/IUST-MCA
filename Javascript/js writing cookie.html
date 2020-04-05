@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cookie</title>
+	<script type="text/javascript">
+		function writecookie()
+		{
+			if(document.myform.cname.value=="")
+			{
+				alert("please enter the customer name");
+				return;
+			}
+            
+			cookievalue=escape(document.myform.cname.value) + ";";
+			document.cookie="name=" + cookievalue;
+			document.write("name=" +cookievalue);
+		}
+
+	</script>
+</head>
+<body>
+
+<font color="0066ff" size="5"><center>This page demonstrates how to store  cookies in our hard drive in order to retrive later</center></font>
+<br \>
+<form name="myform" action="">
+Enter the name : <input type="text" name="cname" \>
+<input type="button" value="set cookie" onclick="writecookie();" \>	
+</form>
+</tt>
+</body>
+</html>

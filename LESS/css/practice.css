@@ -1,0 +1,10 @@
+h1,
+h2 {
+  font: bold 16px red;
+  color: red;
+}
+p,
+span {
+  font: normal 14px #999;
+  color: #999;
+}

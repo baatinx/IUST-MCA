@@ -1,0 +1,340 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.main_footer {
+			display: block;
+			width: 100%;
+			background-color: #424242;
+			border-bottom: 10px solid #424242;
+		}
+		
+		.main_footer *::selection {
+			background-color: #777;
+			color: white;
+		}
+		
+		.level_1_footer {
+			border: none;
+			background-color: #424242;
+			border-bottom: 5px solid white;
+		}
+		
+		.level_1_footer_holder {
+			display: block;
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+			border: none;
+		}
+		
+		.level_1_footer_holder .text_line {
+			list-style: none;
+			display: block;
+			font: bold 17px sans-serif;
+			color: #777;
+			border: none;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: white;
+		}
+		
+		.level_1_footer_holder .subscribe {
+			display: block;
+			border: none;
+			text-align: center;
+		}
+		
+		.level_1_footer_holder .subscribe .subscribe_holder {
+			border: none;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+		
+		.subscribe input[type="email"] {
+			display: inline-block;
+			width: 350px;
+			height: 40px;
+			font: normal 18px sans-serif;
+			padding: 0 10px;
+			color: #777;
+			float: left;
+			border: none
+		}
+		
+		.subscribe a {
+			text-decoration: none;
+			display: inline-block;
+			width: 180px;
+			height: 40px;
+			border: none;
+			float: left;
+			background-color: royalblue;
+			color: white;
+			text-transform: capitalize;
+			font: normal 18px sans-serif;
+			line-height: 40px;
+			vertical-align: middle;
+			transition: all .4s ease-in;
+			position: relative;
+		}
+		
+		.subscribe a::before {
+			content: "\2709";
+			position: absolute;
+			top: 0;
+			left: 12px;
+		}
+		
+		.subscribe a:hover {
+			background-color: #666;
+		}
+		
+		.level_2_footer {
+			display: block;
+			border: none;
+			width: 100%;
+		}
+		
+		.level_2_footer_holder {
+			display: block;
+			width: 1200px;
+			margin: 0 auto;
+			border: none;
+			overflow: auto;
+		}
+		
+		.container {
+			display: block;
+			width: 220px;
+			float: left;
+			border: none;
+			overflow: auto;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			border: none;
+		}
+		
+		.container a {
+			text-decoration: none;
+			color: #e0e0e0;
+			font: normal 13px sans-serif;
+			text-transform: capitalize;
+			display: inline-block;
+			padding: 5px 10px;
+			border: none;
+			float: left;
+			clear: both;
+			transition: all .1s ease;
+			;
+		}
+		
+		.container a:hover {
+			transform: translateX(5px);
+			color: #999;
+		}
+		
+		.social {
+			display: inline-block;
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
+			border: none;
+		}
+		
+		.social .heading {
+			list-style: none;
+			font: normal 17px sans-serif;
+			color: white;
+			margin-bottom: 10px;
+			border: none;
+		}
+		
+		.social img {
+			display: inline-block;
+			padding: 3px;
+			transition: all .4s ease-out;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		
+		@keyframes jump {
+			0% {
+				transform: translateY(0);
+			}
+			60% {
+				transform: translateY(-6px);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+		
+		.social img:hover {
+			animation-name: jump;
+			animation-duration: .2s;
+		}
+		
+		.social .site_name,
+		.social .district_and_pin,
+		.social .state_and_country,
+		.social .mail_id,
+		.social .mail_id a {
+			list-style: none;
+			display: block;
+			color: white;
+			font-family: sans-serif;
+			margin-top: 2px;
+		}
+		
+		.social .site_name {
+			font-weight: bold;
+			font-size: 25px;
+			margin-top: 20px;
+		}
+		
+		.social .mail_id a {
+			display: inline-block
+		}
+		
+		.level_3_footer {
+			display: block;
+			width: 100%;
+			background: white;
+			height: auto;
+			border: none;
+		}
+		
+		.level_3_footer_holder {
+			display: block;
+			width: 1200px;
+			height: 60px;
+			margin: 0 auto;
+			border: none;
+		}
+		
+		.level_3_footer li {
+			list-style: none;
+			display: inline-block;
+			color: #666;
+			font: lighter 14px sans-serif;
+			line-height: 60px;
+			vertical-align: middle;
+			border: none;
+		}
+		
+		.level_3_footer a {
+			display: inline-block;
+			color: #666;
+			font: bold 14px sans-serif;
+			line-height: 60px;
+			vertical-align: middle;
+		}
+		
+		section {
+			display: block;
+			height: 900px;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<section>main section</section>
+	<footer class="main_footer">
+		<div class="level_1_footer">
+			<div class="level_1_footer_holder">
+				<li class="text_line">Sign up to our monthly newsletter and keep up-to-date with what's new in college and much more ! </li>
+				<div class="subscribe">
+					<div class="subscribe_holder">
+						<input type="email" placeholder="Your email address..." spellcheck="false" autofocus \>
+						<a href="#">subscribe me</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="level_2_footer">
+			<div class="level_2_footer_holder">
+				<div class="container">
+					<a href="#">annual report</a>
+					<a href="#">AMU gazateee</a>
+					<a href="#">RTI</a>
+					<a href="#">directories</a>
+					<a href="#">annual report</a>
+					<a href="#">visitors</a>
+					<a href="#">internal quality assurance</a>
+					<a href="#">women education</a>
+					<a href="#">maps</a>
+					<a href="#">annual report</a>
+				</div>
+				<div class="container">
+					<a href="#">Women Education</a>
+					<a href="#">maps</a>
+					<a href="#">purchase & tenders</a>
+					<a href="#">NAAC</a>
+					<a href="#">NCC cadets</a>
+					<a href="#">grievence cell</a>
+					<a href="#">computer center</a>
+					<a href="#">web mail</a>
+					<a href="#">faculties</a>
+					<a href="#">capmus notice</a>
+				</div>
+				<div class="container">
+					<a href="#">annual report</a>
+					<a href="#">AMU gazateee</a>
+					<a href="#">RTI</a>
+					<a href="#">directories</a>
+					<a href="#">annual report</a>
+					<a href="#">visitors</a>
+					<a href="#">national scholarships</a>
+					<a href="#">women education</a>
+					<a href="#">maps</a>
+					<a href="#">annual report</a>
+				</div>
+				<div class="container">
+					<a href="#">Women Education</a>
+					<a href="#">maps</a>
+					<a href="#">purchase & tenders</a>
+					<a href="#">NAAC</a>
+					<a href="#">NCC cadets</a>
+					<a href="#">grievence cell</a>
+					<a href="#">computer center</a>
+					<a href="#">web mail</a>
+					<a href="#">faculties</a>
+					<a href="#">capmus notice</a>
+				</div>
+				<div class="social">
+					<li class="heading">on the web</li>
+					<img src="images/facebook_round.png">
+					<img src="images/twitter_round.png">
+					<img src="images/linkedin_round.png" \>
+					<img src="images/googleplus_round.png">
+					<li class="site_name">kashmir university</li>
+					<li class="district_and_pin">srinagar-190009</li>
+					<li class="state_and_country">J&amp;K India </li>
+					<li class="mail_id">Email: <a href="#">info@kashmiruniversity.ac.in</a></li>
+				</div>
+			</div>
+			<div class="level_3_footer">
+				<div class="level_3_footer_holder">
+					<li class="copy_right">&copy; 2016 Kashmir University. All rights reserved. For website information : </li>
+					<a href="#">web@kashmiruniversity.ac.in</a>
+				</div>
+			</div>
+	</footer>
+
+</body>
+
+</html>

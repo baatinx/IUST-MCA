@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>with keyword in java script</title>
+	<script>
+     function setno(num)
+     {
+     	with(this)
+     	{
+     	no=num;
+     }
+     }
+	</script>
+
+	<script type="text/javascript">
+	function student()
+	{
+            this.name="basit";
+            this.id="1800";
+            this.address="solina";
+            this.no=0
+            this.setno=setno;   
+     }
+     </script>
+</head>
+<body>
+     <script type="text/javascript">
+		var student = new student();
+		student.setno(400);
+		document.write("name = " + student.name + "<br \>");
+		document.write("id = " + student.id + "<br \>");
+		document.write("address = " + student.address + "<br \>");
+		document.write("phone number = " + student.no + "<br \>");
+	</script>
+
+</body>
+</html>

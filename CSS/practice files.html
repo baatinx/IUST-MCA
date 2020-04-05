@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			outline: none;
+			box-sizing: border-box;
+		}
+
+		.cc {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.circle {
+			position: relative;
+			display: block;
+			top: calc(50% - 50px);
+			left: calc(50% - 50px);
+			width: 100px;
+			height: 100px;
+			border: 10px solid transparent;
+			border-radius: 50%;
+			animation: c;
+			animation-duration: s;
+			animation-iteration-count: infinite;
+			animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+			overflow: visible;
+		}
+
+		.line {
+			position: absolute;
+			list-style-type: none;
+			height: 10px;
+			width: 10px;
+			background: green;
+			top: calc(50% - 5px);
+			left: calc(0% - 10px);
+			border-radius: 50%;
+		}
+
+		.line_2 {
+			top: calc(0% - 10px);
+			left: calc(50% - 5px);
+		}
+
+		.line_3 {
+			top: 100%;
+			left: calc(50% - 5px);
+		}
+
+		.line_4 {
+			top: calc(50% - 5px);
+			left: 100%;
+		}
+
+		@keyframes c {
+			from {
+				transform: rotateZ(0deg);
+			}
+			to {
+				transform: rotateZ(360deg);
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="load_screen"><img src="../pictures/loader.gif" id="loading" /> </div>
+
+	<div class="cc">
+		<div class="circle">
+			<li class="line_1 line"></li>
+			<li class="line_2 line"></li>
+			<li class="line_3 line"></li>
+			<li class="line_4 line"></li>
+
+
+		</div>
+	</div>
+
+
+</body>
+
+</html>

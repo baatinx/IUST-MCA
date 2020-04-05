@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		
+		.wrapper {
+			display: block;
+			width: 430px;
+			height: auto;
+			border-top: 1px solid silver;
+			margin: 100px auto;
+			padding-top: 50px;
+		}
+		
+		.wrapper a {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			margin: 0 30px;
+			border-radius: 6px;
+			transform: translate(0, 0);
+			transition: all .2s ease-out;
+		}
+		/* note :
+	 if box shadow is 6px down then
+		item should be 3px down on active ie translate y 3px there remains 3px box shadow;
+					and the box shadow should 2px  on active ie box shadow 0 2px o color
+		ie 3+2=5;
+		and one  1px should be remained for better effect;
+		
+		*/
+		
+		.facebook {
+			box-shadow: 0 6px 0#293F63;
+			background-image: url(images/facebook.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		.facebook:active {
+			box-shadow: 0 2px 0 #293F63;
+		}
+		
+		.twitter {
+			box-shadow: 0 6px 0 #2695BC;
+			background-image: url(images/twitter.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		.twitter:active {
+			box-shadow: 0 2px 0 #2695BC;
+		}
+		
+		.rss {
+			box-shadow: 0 6px 0 #C64802;
+			background-image: url(images/rss.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		.rss:active {
+			box-shadow: 0 2px 0#C64802;
+		}
+		
+		a:active {
+			transform: translate(0, 3px);
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="wrapper">
+		<a href="#" class="facebook"></a>
+		<a href="#" class="twitter"></a>
+		<a href="#" class="rss"></a>
+
+
+		</a>
+	</div>
+</body>
+
+</html>

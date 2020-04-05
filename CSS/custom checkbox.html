@@ -1,0 +1,68 @@
+<html>
+
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      font: 500 15px monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    div {
+      display: block;
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      border: 1px solid red;
+      padding: 50px;
+    }
+
+    input[type="checkbox"]+.label_text {
+      color: red;
+    }
+
+    input[type="checkbox"]+.label_text::before {
+      content: 'unchecked';
+    }
+
+
+    input[type="checkbox"]:checked+.label_text::before {
+      content: "\f14a"
+    }
+  </style>
+</head>
+
+<body><i class="fa fa-eye-slash" aria-hidden="true"></i>
+  <div>
+    <form>
+      <label>
+				<input type="checkbox" name="check" >
+				<span class="label_text">item one</span>
+			</label>
+      <br>
+      <label>
+				<input type="checkbox" name="check" >
+				<span class="label_text">item two</span>
+			</label>
+      <br>
+      <label>
+				<input type="checkbox" name="check" >
+				<span class="label_text">item four</span>
+			</label>
+      <br>
+      <label>
+				<input type="checkbox" name="check" >
+				<span class="label_text">item four</span>
+			</label>
+    </form>
+  </div>
+
+</body>
+
+</html>

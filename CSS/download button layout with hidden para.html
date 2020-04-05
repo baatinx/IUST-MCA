@@ -1,0 +1,77 @@
+<html>
+
+<head>
+	<style type="text/css">
+		div {
+			position: relative;
+			top: 100px;
+			left: 350px;
+			width: 201px;
+		}
+		
+		.button a {
+			display: block;
+			height: 50px;
+			width: 200px;
+			background-color: #00b7ea;
+			color: white;
+			font: 17px comic sans ms;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 50px;
+			border-radius: 10px;
+			box-shadow: 2px 2px 8px;
+		}
+		
+		p {
+			background-color: #222;
+			display: block;
+			height: 40px;
+			width: 180px;
+			margin: -50px 0 0 10px;
+			text-align: center;
+			font: 15px comic sans ms;
+			color: #fff;
+			position: absolute;
+			z-index: -1;
+			border-radius: 5px;
+			box-shadow: 2px 2px 8px;
+			transition: all .4s ease;
+		}
+		
+		.button:hover .top {
+			margin: -82px 0 0 10px;
+			line-height: 35px;
+		}
+		
+		.button:hover .bottom {
+			line-height: 35px;
+			margin: -5px 0 0 10px;
+		}
+		
+		.button:active .top {
+			margin: -20px 0 0 10px;
+		}
+		
+		.button:active .bottom {
+			margin: -70px 0 0 10px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="button">
+		<a href="#">Download</a>
+		<p class="top">Click to begin</p>
+		<p class="bottom">1.2mb .zip</p>
+	</div>
+
+</body>
+
+
+</html>

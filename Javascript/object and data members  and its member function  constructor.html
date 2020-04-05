@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>function in java script</title>
+	<script type="text/javascript">
+		function addamount(amount)
+		{
+			this.price=amount;
+		}
+
+		function book(name,author)
+		{
+			this.name=name;
+			this.author=author;
+			this.addamount=addamount;
+		}
+
+		</script>
+
+</head>
+<body>
+		<script type="text/javascript">
+			var book = new book("botany","danish");
+			book.addamount(500);
+			       document.write("Book name is : " + book.name + "<br>"); 
+				   document.write("Book author is : " + book.author + "<br>"); 
+				   document.write("Book price is : " + book.price + "<br>");
+
+		</script>
+</body>
+</html>

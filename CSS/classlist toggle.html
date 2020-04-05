@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+    .bold {
+      font-weight: bolder;
+    }
+
+    .color {
+      color: red;
+    }
+
+    .font {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="target_para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <button type="button" data-classname='font' onclick="myfunc1(this)">font</button>
+  <button type="button" data-classname='color' onclick="myfunc1(this)">color</button>
+  <button type="button" data-classname='bold' onclick="myfunc1(this)">bold</button>
+  <script type="text/javascript">
+    function myfunc1(obj) {
+      var class_name = obj.dataset.classname;
+      var element = document.getElementById('target_para');
+      switch (class_name) {
+        case 'font':
+          element.classList.toggle('font');
+          break;
+        case 'color':
+          element.classList.toggle('color');
+          break;
+        case 'bold':
+          element.classList.toggle('bold');
+          break;
+      }
+
+    }
+  </script>
+</body>
+
+</html>

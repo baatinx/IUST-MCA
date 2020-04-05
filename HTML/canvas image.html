@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		canvas {
+			height: 500px;
+			width: 1300px;
+			border: 1px solid red;
+		}
+		
+		img {
+			height: 100px;
+			width: 200px;
+			border: 5px solid #ddd;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById("c1");
+			var context = canvas.getContext("2d")
+			var pic = document.getElementById("pic1")
+			context.drawImage(pic, 0, 0);
+		}
+
+	</script>
+</head>
+
+<body>
+	<img id="pic1" src="images/asc_logo.png" \>
+	<canvas id="c1"></canvas>
+</body>
+
+</html>

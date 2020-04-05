@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<style type="text/css">
+		#bt1 {
+			position: absolute;
+			left: 500px;
+			top: 30px;
+			width: 200px;
+			height: 40px;
+			line-height: 30px;
+			background-color: white;
+			border: 1px solid silver;
+			color: #0066ff;
+			font-size: 20px;
+			font-family: comic sans ms;
+			padding: 4px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		var id1 = null;
+		var i = null;
+		var intrvl_id = null;
+
+		function init() {
+			id1 = document.getElementById("bt1");
+			i = 0;
+			intrvl_id = setInterval(strt, 200);
+
+		}
+
+		function strt() {
+			i++;
+			document.write(i + "<br \> ");
+			if (i == 10) {
+				clearInterval(intrvl_id);
+				alert("end");
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<input type="button" id="bt1" value="click here" onclick="init();" \>
+</body>
+
+</html>

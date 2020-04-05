@@ -1,0 +1,71 @@
+<html>
+
+<head>
+	<style type="text/css">
+		.wrapper {
+			display: inline-block;
+			margin: 0px;
+			padding: 0px;
+			height: auto;
+			border: 1px solid #ddd;
+			overflow: auto;
+			position: absolute;
+			top: 200px;
+			left: 300px;
+		}
+
+		.txt1 {
+			float: left;
+			width: 300px;
+			height: 30px;
+			outline: none;
+			border: none;
+			font: bold 17px courier new;
+		}
+
+		.bt1 {
+			float: left;
+			width: auto;
+			height: 30px;
+			border: none;
+			padding-left: 25px;
+			padding-right: 25px;
+			outline: none;
+			text-align: center;
+			background-color: #4caf58;
+			color: white;
+			font: bold 13px comic sans ms;
+			cursor: pointer;
+			transition: all .4s ease;
+			display: none;
+		}
+
+		.txt1:focus+.bt1 {
+			display: block;
+		}
+
+		.txt1:empty {
+			border: 1px solid red
+		}
+
+		.txt1:not(:empty) {
+			border: 1px solid blue;
+		}
+	</style>
+
+</head>
+
+<body>
+	<p>when any key is pressed, then only search button is visible </p>
+	<div id="load_screen"><img src="../pictures/loader.gif" id="loading" /> </div>
+
+	<div class="wrapper">
+		<input type="text" class="txt1" placeholder="Search here ...">
+		<input type="button" class="bt1" value="Search" \>
+
+	</div>
+
+
+</body>
+
+</html>

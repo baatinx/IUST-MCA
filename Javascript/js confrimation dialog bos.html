@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>confrimation dialog box</title>
+	<script type="text/javascript">
+	var result;
+	var get_name;
+	function get_input()
+	{
+		get_name=prompt("enter your name","basit");
+
+		if(get_name == null)
+		{
+			document.write("you did not provide your name ");
+		}
+		else
+		{
+			document.write("welcome " + get_name);
+		}
+	}
+	</script>
+</head>
+
+<body onload="javascript:get_input();">
+</body>
+</html>

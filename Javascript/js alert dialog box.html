@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>alert dialog</title>
+	<script type="text/javascript">
+	function check()
+	{
+        if (document.myform.customerid.value == "")
+		 {
+			alert("please enter your id ");
+		 }
+		  else
+		{
+			if(document.myform.customerid.value < 1800)
+		    {  
+						alert("id must be greater than 1800");
+						return;
+			}
+			else
+			{
+						alert("thanks for providing a valid id ");
+						document.write("thanks");
+
+			}
+		}
+		
+	}
+	</script>
+</head>
+
+<body>
+<form name="myform" action="">
+<font>This page demonstrate the use of alert dialog</font>
+<br \>
+<br \>
+<font>Enter your id </font>
+<input type="text" name="customerid" \>
+<input type="button" value="submit" onclick="check();" \>
+</form>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			outline: none;
+			box-sizing: border-box;
+		}
+		
+		.main_section {
+			display: block;
+			text-align: center;
+			border: none;
+			max-width: 1200px;
+			margin: auto;
+		}
+		
+		.login_section {
+			position: relative;
+			border: none;
+			display: inline-block;
+			max-width: 900px;
+			margin: auto;
+			padding: 15px 30px;
+			background: #f6f6f6;
+			box-shadow: 5px 5px 15px #eee;
+		}
+		
+		.left_side {
+			padding: 1px;
+			display: block;
+			max-width: 500px;
+			float: left;
+			border: none;
+			padding-right: 10px;
+		}
+		
+		.left_side .left_bottom {
+			float: left;
+			width: 100%;
+			border-top: 1px solid silver;
+		}
+		
+		.right_side {
+			position: relative;
+			border-left: 1px solid silver;
+			max-width: 350px;
+			padding: 10px 50px 40px 30px;
+			display: block;
+			float: left;
+		}
+		
+		.left_side .existing_user,
+		.left_side .forgot,
+		.left_side input[type="text"],
+		.left_side input[type="password"],
+		.left_Side hr,
+		.left_side button {
+			display: block;
+			float: left;
+			clear: left;
+			overflow: auto;
+		}
+		
+		.existing_user {
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			font: bold 25px agency fb;
+			color: royalblue;
+		}
+		
+		.left_side input[type="text"],
+		.left_side input[type="password"] {
+			border: 1px solid silver;
+			width: 300px;
+			height: 33px;
+			margin-bottom: 15px;
+			font: bold 17px agency fb;
+			color: gray;
+		}
+		
+		.login_button {
+			font: bold 20px agency fb;
+			color: white;
+			background-color: royalblue;
+			border: none;
+			cursor: pointer;
+			padding: 4px 20px 6px 20px;
+			margin-bottom: 10px;
+			margin-top: 1px;
+			text-transform: capitalize;
+			box-shadow: 5px 5px 10px #bbb;
+		}
+		
+		.forgot {
+			font: bold 18px agency fb;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		
+		.forgot a {
+			text-decoration: none;
+			color: royalblue;
+		}
+		
+		.left_bottom .new_user {
+			display: inline-block;
+			float: left;
+			position: relative;
+			font: bold 28px agency fb;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		
+		.left_bottom .register_button {
+			border: 1px solid red;
+			float: right;
+			position: relative;
+			top: -10px;
+			font: bold 23px agency fb;
+			color: white;
+			background-color: royalblue;
+			border: none;
+			cursor: pointer;
+			padding: 4px 20px 6px 20px;
+			margin-right: 100px;
+			text-transform: capitalize;
+			box-shadow: 5px 5px 10px #bbb;
+		}
+		
+		.right_side button {
+			display: block;
+			margin-bottom: 20px;
+			width: 230px;
+			height: 60px;
+			line-height: 60px;
+			vertical-align: middle;
+			overflow: visible;
+			margin-left: 70px;
+			cursor: pointer;
+			box-shadow: 5px 5px 10px #bbb;
+		}
+		
+		.fb {
+			position: relative;
+			margin-top: 20px;
+			background-color: rgba(61, 90, 152, 0.96);
+			color: white;
+			font: bold 20px agency fb;
+			border: none;
+		}
+		
+		.google {
+			position: relative;
+			margin-top: 20px;
+			background-color: #5694fb;
+			color: white;
+			font: bold 20px agency fb;
+			border: none;
+		}
+		
+		.twitter {
+			position: relative;
+			margin-top: 20px;
+			background-color: rgba(80, 171, 241, 0.90);
+			color: white;
+			font: bold 20px agency fb;
+			border: none;
+		}
+		
+		.fb::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 170px;
+			font: bold 39px agency fb;
+			line-height: 60px;
+			vertical-align: middle;
+			background-color: transparent;
+			transform: translateX(-50px);
+			background-image: url(images/facebook.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		.google::before {
+			content: 'G';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 170px;
+			font: bold 39px agency fb;
+			line-height: 60px;
+			vertical-align: middle;
+			background: #4285f4;
+			transform: translateX(-50px);
+		}
+		
+		.twitter::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 170px;
+			font: bold 39px agency fb;
+			line-height: 60px;
+			vertical-align: middle;
+			background-color: transparent;
+			background-image: url(images/twitter.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translateX(-50px);
+		}
+		
+		strong {
+			font-size: 29px;
+		}
+		
+		.right_side::before {
+			content: 'OR';
+			position: absolute;
+			top: 100;
+			left: 145;
+			right: 145;
+			bottom: 100;
+			border-radius: 50%;
+			background: #f6f6f6;
+			font: bold 20px agency fb;
+			text-align: center;
+			z-index: 1000;
+			height: 60px;
+			line-height: 60px;
+			vertical-align: middle;
+			box-sizing: border-box;
+			border: 1px solid silver;
+			color: royalblue;
+			transform: translateX(-175px) translateY(20px);
+		}
+		
+		@media screen and (min-width:0px) and (max-width:950px) {
+			.right_side {
+				clear: both;
+				border: none;
+				border-top: 1px solid silver;
+				padding-top: 30px;
+				margin-top: 30px;
+			}
+			.right_side::before {
+				transform: translateY(-130px);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<br \>
+	<br \>
+	<br \>
+	<br \>
+	<br \>
+	<br \>
+	<br \>
+	<section class="main_section">
+		<section class="login_section">
+			<div class="left_side">
+				<p class="existing_user">existing user login here</p>
+				<input type="text" placeholder=" Enter Email" spellcheck="false" autofocus \>
+				<input type="password" placeholder=" Enter Password" \>
+				<button class="login_button">login</button>
+				<p class="forgot">Forgot your password? <a href="#">click here</a></p>
+				<div class="left_bottom">
+					<p class="new_user">New User Register Here</p>
+					<button class="register_button">register now</button>
+				</div>
+			</div>
+			<div class="right_side">
+				<button class="fb">login with <strong>Facebook</strong></button>
+				<button class="google">login with <strong>Google</strong></button>
+				<button class="twitter">login with <strong>Twitter</strong></button>
+			</div>
+		</section>
+	</section>
+</body>
+
+</html>

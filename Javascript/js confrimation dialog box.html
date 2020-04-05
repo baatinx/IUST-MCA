@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>confrimation dialog box</title>
+	<script type="text/javascript">
+	var result;
+	function check()
+	{
+        if (document.myform.customerid.value == "")
+		 {
+			alert("please enter your id ");
+		 }
+		  else
+		{
+			if(document.myform.customerid.value < 1800)
+		    {  
+						alert("id must be greater than 1800");
+						return;
+			}
+			else
+			{
+						result=confirm("id accepted \n do you want to check your account details");
+						if(result==true)
+						{
+							redirect_user();
+						}
+						else
+						{
+							document.write("thanks ");
+						}
+
+			}
+		}
+		
+	}
+
+	function redirect_user()
+	{
+		window.location="https://www.google.com";
+	}
+	</script>
+</head>
+
+<body>
+<form name="myform" action="">
+<font>This page demonstrate the use of alert dialog</font>
+
+
+
+
+
+
+
+
+
+<br \>
+<br \>
+<font>Enter your id </font>
+<input type="text" name="customerid" \>
+<input type="button" value="submit" onclick="check();" \>
+</form>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		body {
+			width: 90%;
+			margin: 0 auto;
+		}
+		
+		#header {
+			font: bold 22px comic sans ms;
+			color: royalblue;
+			text-align: center
+		}
+		
+		#content {
+			overflow: auto;
+		}
+		
+		#nav,
+		#feature,
+		#footer {
+			background-color: #efefef;
+			padding: 1%;
+			margin: 1%;
+			font-family: comic sans ms;
+			border: 1px solid silver;
+		}
+		
+		#nav {
+			text-align: center;
+		}
+		
+		.column1,
+		.column2,
+		.column3 {
+			background-color: #efefef;
+			width: 31%;
+			float: left;
+			margin: 1%;
+			font-family: comic sans ms;
+			text-decoration: none;
+			border: 1px solid silver;
+			text-align: center;
+		}
+		
+		.column3 {
+			margin-right: 0%;
+		}
+		
+		li {
+			display: inline;
+			padding: 0.5em;
+			text-align: center;
+		}
+		
+		#nav,
+		#footer {
+			padding: 0.5em;
+			margin-bottom: 1em;
+			border: 1px solid silver;
+		}
+		
+		#feature,
+		.article {
+			height: 8em;
+			background-color: #efefef;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div id="header">
+		<h1>logo</h1>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">porducts</a></li>
+			<li><a href="#">services</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="feature">
+			<p>featutes</p>
+		</div>
+		<div class="article column1">
+			<p>column one</p>
+		</div>
+		<div class="article column2">
+			<p>column two</p>
+		</div>
+		<div class="article column3">
+			<p>column three</p>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; copyright 2016</p>
+	</div>
+</body>
+
+</html>

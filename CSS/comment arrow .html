@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.bt1 {
+			position: relative;
+			margin: 200px 600px;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			color: #777;
+			font: bold 11px sans-serif;
+			border: 1px solid silver;
+			padding: 10px 30px;
+			background: white;
+		}
+		
+		.bt1::before {
+			content: '';
+			position: absolute;
+			border-width: 0px 10px 10px 10px;
+			border-style: solid;
+			border-color: transparent transparent silver transparent;
+			left: calc(50% - 10px);
+			top: 0;
+			z-index: -1;
+			transition: all .2s ease-out;
+		}
+		
+		.bt1:hover::before {
+			top: -10px;
+		}
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<a href="#" class="bt1"> log in</a>
+</body>
+
+</html>

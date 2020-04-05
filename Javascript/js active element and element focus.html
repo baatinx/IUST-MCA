@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		function fcs() {
+			document.getElementById('hit').focus();
+		}
+
+		function print_p() {
+			var a = document.activeElement.tagName;
+			document.write(a);
+
+		}
+	</script>
+</head>
+
+<body onload="fcs();">
+	<input type="text">
+	<input type="password">
+	<input type="button">
+	<input type="radio" id="hit">
+	<input type="button" value="click here" onclick="print_p();">
+</body>
+
+</html>

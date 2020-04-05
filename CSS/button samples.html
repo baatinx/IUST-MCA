@@ -1,0 +1,202 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.container {
+			position: relative;
+			top: 100px;
+			left: 100px;
+		}
+		
+		a {
+			margin: 10px;
+		}
+		
+		a:not(.type6, .type7)::before {
+			content: '\a908';
+		}
+		
+		.type1 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #bbb;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 4px 10px;
+			background: #f8f8f8;
+			box-shadow: 1px 3px 5px #ddd;
+		}
+		
+		.type2 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: white;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 4px 10px;
+			background: #555;
+			box-shadow: 1px 2px 5px #bbb;
+		}
+		
+		.type3 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #999;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 4px 10px;
+		}
+		
+		.type3:hover {
+			text-decoration: underline;
+		}
+		
+		.type4 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #bbb;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 4px 10px;
+			border-radius: 4px;
+			border: 1px solid #ddd;
+			box-shadow: 2px 2px 5px #eee;
+		}
+		
+		.type5 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #bbb;
+			font: normal 11px sans-serif;
+			border: none;
+			padding: 4px 10px;
+			border-radius: 4px;
+			box-shadow: 0 0 5px #ddd;
+		}
+		
+		.type6 {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: white;
+			font: normal 13px sans-serif;
+			text-align: center;
+			border: none;
+			width: 90px;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+			background-color: #b9b9b9;
+			margin: 40px;
+			border-top-right-radius: 1px;
+			border-bottom-right-radius: 1px;
+		}
+		
+		.type6::before {
+			content: '+';
+			position: absolute;
+			top: 0px;
+			right: 100%;
+			width: 30%;
+			font: normal 30px sans-serif;
+			text-align: center;
+			height: 100%;
+			line-height: 30px;
+			vertical-align: middle;
+			color: white;
+			background-color: #aaa;
+			border-top-left-radius: 1px;
+			border-bottom-left-radius: 1px;
+		}
+		
+		.type7 {
+			display: inline-block;
+			background: #eee;
+			color: #999;
+			font: bold 11px sans-serif;
+			padding: 5px 10px;
+			border: none;
+			text-decoration: none;
+			text-transform: capitalize;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			transition: all .2s ease;
+		}
+		
+		.type7::before {
+			content: '';
+			display: inline-block;
+			background: white;
+			padding: 5px;
+			border-radius: 50%;
+			margin-right: 5px;
+		}
+		
+		.type8 {
+			position: relative;
+			border: 1px solid silver;
+			color: #888;
+			text-decoration: none;
+			text-transform: uppercase;
+			font: normal 10px sans-serif;
+			display: inline-block;
+			border-radius: 2px;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+			padding-right: 20px;
+			padding-left: 20px;
+			box-shadow: 1px 2px 5px #ddd;
+			margin-left: 50px;
+		}
+		
+		.type8::before {
+			content: '+';
+			position: absolute;
+			top: 0;
+			left: -30%;
+			box-shadow: 1px 2px 5px #ddd;
+			;
+			width: 20%;
+			height: 100%;
+			border: 1px solid silver;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="container">
+		<a href="#" class="type1"> download</a>
+		<a href="#" class="type2"> download</a>
+		<a href="#" class="type3"> download</a>
+		<a href="#" class="type4"> download</a>
+		<a href="#" class="type5"> download</a>
+		<a href="#" class="type6"> download</a>
+		<a href="#" class="type7"> download</a>
+		<a href="#" class="type8">download</a>
+	</div>
+</body>
+
+</html>

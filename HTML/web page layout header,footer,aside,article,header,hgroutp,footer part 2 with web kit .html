@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>web page layout</title>
+</head>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	h1 {
+		font: bold 20px comic sans ms;
+	}
+	
+	h2 {
+		font: bold 14px comic sans ms;
+	}
+	
+	header,
+	section,
+	aside,
+	footer,
+	nav,
+	article,
+	hgroup {
+		display: block;
+	}
+	
+	body {
+		width: 100%;
+		display: -webkit-box;
+		-webkit-box-pack: center;
+	}
+	
+	#bigdiv {
+		max-width: 1300px;
+		margin-top: 20px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-flex: 1;
+	}
+	
+	#topheader {
+		background: #f1f1f1;
+		color: orangered;
+		padding: 20px;
+		font: bold 40px comic sans ms;
+	}
+	
+	#topmenu {
+		border: 1px solid silver;
+		background-color: white padding: 5px;
+	}
+	
+	#topmenu li {
+		display: inline-block;
+		list-style: none;
+		margin-left: 4px;
+		margin-right: 40px;
+		font-size: 16px;
+		color: #0066ff;
+		font-family: comic sans ms;
+	}
+	
+	#newdiv {
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+	}
+	
+	#mainsection {
+		border: 1px solid grey;
+		-webkit-box-flex: 1;
+		margin-right: 10px;
+		margin-top: 10px;
+		padding: 20px;
+	}
+	
+	#sidenews1 {
+		border: 1px solid silver;
+		width: 200px;
+		padding: 20px;
+		margin-top: 10px;
+		background: orangered;
+	}
+	
+	article {
+		border: 1px solid silver;
+		background-color: white;
+		color: #353434;
+		padding: 20px;
+		padding-bottom: 7px;
+		margin-bottom: 40px;
+		margin-left: 20px;
+	}
+	
+	article footer {
+		text-align: right;
+		padding: 10px;
+		font: bold 14px ocr a std;
+		color: #f50a0a
+	}
+	
+	#thefooter {
+		text-align: center;
+		padding: 10px;
+	}
+</style>
+
+<body>
+	<div id="bigdiv">
+		<header id="topheader">
+			Amar Singh College
+		</header>
+		<hr \>
+		<nav id="topmenu">
+			<ul>
+				<li>Home</li>
+				<li>Admission</li>
+				<li>Notification</li>
+				<li>Results</li>
+				<li>Downloads</li>
+				<li>About us</li>
+			</ul>
+		</nav>
+		<div id="newdiv">
+			<section id="mainsection">
+				<article>
+					<header>
+						<hgroup>
+							<h1>This is the header of the first article</h1>
+							<h2>This is the sub header of the first aritcle</h2>
+							<hgroup>
+					</header>
+					<p>This is the content in the web page ans jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<p>Jjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<p>Kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<footer>This is footer of the first article </footer>
+				</article>
+
+				<article>
+					<header>
+						<hgroup>
+							<h1>This is the header of the second article</h1>
+							<h2>This is the sub header of the second aritcle</h2>
+							<hgroup>
+					</header>
+					<p>This is the content in the web page ans jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<p>Jjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<p>Kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+					<footer>
+						<p>danish hanief</p>
+						<p>b.com 2<sup>nd</sup> year</p>
+					</footer>
+				</article>
+			</section>
+			<aside id="sidenews1">
+				<h1>news</h1>
+				<h3>This is the aside section of out web page</h3> </aside>
+			<!-- <aside id="sidenews2"><h3>This is the second aside section of out web page</h3></aside> -->
+		</div>
+		<footer id="the_footer">This is the footer og out web page</footer>
+	</div>
+</body>
+
+</html>

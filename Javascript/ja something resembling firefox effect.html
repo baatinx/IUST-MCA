@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		#p1 {
+			height: 200px;
+			width: 200px;
+			border: 1px solid silver;
+			margin-top: 200px;
+			margin-left: 300px;
+		}
+	</style>
+	<script type="text/javascript">
+		function up() {
+			var a = null;
+			a = document.getElementById("p1");
+			num = a.style.margin;
+			a.style.marginTop = "220px";
+		}
+
+		function down() {
+			var a = null;
+			a = document.getElementById("p1");
+			num = a.style.marginTop;
+			a.style.marginTop = "180px";
+		}
+	</script>
+</head>
+
+<body>
+	<img src="F:\Gallery\pics\best.jpg" id="p1" onmouseover="up();" onmouseout="down();">
+	<br \>
+</body>
+

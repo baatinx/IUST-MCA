@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		/*attribute selector */
+		
+		button[rel] {
+			border: 3px solid green;
+		}
+		/*exact attribute value selector */
+		
+		button[rel='first'] {
+			color: red;
+			font: bold 15px comic sans ms;
+		}
+		/*partial attribute value selector */
+		
+		button[rel~='first'] {
+			margin: 200px;
+			background: white;
+			padding: 10px 20px;
+		}
+
+	</style>
+</head>
+
+
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<button rel="first">this isnjdkdjfkjkjdfkjdkf kjkdjf kj</button>
+	<button rel="red first button">thejht jeh hjhjhjhjthej jhtjehjhjt</button>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		body {
+			margin-top: 20px;
+		}
+		
+		div {
+			border: 1px solid silver;
+			width: 100%;
+			height: 34px;
+			box-sizing: border-box;
+			background-color: white;
+			overflow: hidden;
+			box-shadow: 0px 2px 20px silver;
+		}
+		
+		ul {
+			border: none;
+			list-style: none;
+			width: 120%;
+			height: 32px;
+			box-sizing: border-box;
+			background-color: white;
+			overflow: hidden;
+			display: flex;
+		}
+		
+		li {
+			display: inline-block;
+			height: 32px;
+			overflow: hidden;
+		}
+		
+		.li1 {
+			box-sizing: border-box;
+			flex: 1;
+			transform: skewX(60deg);
+			position: relative;
+			left: -30px;
+			text-align: right;
+			padding-right: 40px;
+			background-color: blueviolet;
+			color: white;
+			border: none;
+		}
+		
+		.li2 {
+			box-sizing: border-box;
+			flex: 3;
+			transform: skewX(60deg);
+			position: relative;
+			left: -20px;
+			text-align: right;
+			padding-right: 40px;
+			background-color: khaki;
+			background: #e70000;
+			background: #0fc955;
+			background: #ff008a;
+			background: #1d75f8;
+			background: #00aeff;
+			background: #e8442e;
+			background: #606060;
+			background: #e8442e;
+			text-align: left;
+			border: none;
+		}
+		
+		.ques1 {
+			position: relative;
+			left: 10px;
+			display: block;
+			border: none;
+			transform: skewX(-60deg);
+			color: white;
+			text-transform: uppercase;
+			font: bold 16px Agency FB;
+			height: 32px;
+			line-height: 32px;
+			vertical-align: middle;
+			box-sizing: border-box;
+		}
+		
+		.ans1 {
+			position: relative;
+			left: 40px;
+			display: inline-block;
+			transform: skewX(-60deg);
+			border: none;
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			font: bold 16px Agency FB;
+			height: 32px;
+			line-height: 32px;
+			vertical-align: middle;
+			box-sizing: border-box;
+			transition: all .4s ease;
+			margin-left: 1000px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		counter = 2;
+
+		function init() {
+			setTimeout(move, 400);
+
+		}
+
+		function move() {
+			var a = document.getElementById("a1");
+			a.style.marginLeft = "0px";
+
+			if (a.style.marginLeftn = "0px") {
+				setTimeout(goback, 3000)
+
+			}
+
+		}
+
+		function goback() {
+			var b = document.getElementById("a1");
+			b.style.marginLeft = "1000px";
+			setTimeout(comeout, 500);
+
+		}
+
+
+		function comeout() {
+			var c = document.getElementById("a1");
+			var n1, n2, n3, n4, n5, n6;
+			var limit = 6;
+			switch (counter) {
+				case 1:
+					n1 = " jk asks Center to undertake jhelum flood control study <sub>read more</sub> ";
+					c.innerHTML = n1;
+					c.setAttribute("href", "https://www.link_1.com");
+
+					setTimeout(goback, 3000);
+					break;
+
+				case 2:
+					n2 = " 4 militants, soilder killed in tangdar <sub>read more</sub>";
+					c.innerHTML = n2;
+					c.setAttribute("href", "https://www.link_2.com");
+
+					setTimeout(goback, 2500);
+					break;
+
+				case 3:
+					n3 = " from the lower house | government using money to buy votes : opposition <sub>read more</sub> ";
+					c.innerHTML = n3;
+					c.setAttribute("href", "https://www.link_3.com");
+
+					setTimeout(goback, 5000);
+					break;
+				case 4:
+					n4 = " opposition,ruling legislators unite for reservation in job promotions | register protest in house,stage walkout <sub>read more</sub>";
+					c.innerHTML = n4;
+					c.setAttribute("href", "https://www.link_4.com");
+
+					setTimeout(goback, 6000);
+					break;
+				case 5:
+					n5 = " 4 clauses in new industrial policy put on hold : drabu <sub>read more</sub> ";
+					c.innerHTML = n5;
+					c.setAttribute("href", "https://www.link_5.com");
+
+					setTimeout(goback, 4000);
+					break;
+				case 6:
+					n6 = " in anantnag, omer says vote for mehbooba is vote for rss <sub>read more</sub>";
+					c.innerHTML = n6;
+					c.setAttribute("href", "https://www.link_6.com");
+
+					setTimeout(goback, 4000);
+					break;
+			}
+			if (counter == limit) {
+				counter = 0;
+			}
+			counter = counter + 1;
+			c.style.marginLeft = "0px";
+
+
+
+		}
+
+	</script>
+
+</head>
+
+<body onload="init();">
+	<div class="wrapper">
+		<ul>
+			<li class="li1">
+				<span class="ques1">IN FOCUS </span>
+			</li>
+			<li class="li2">
+				<a id="a1" href="https://www.link_1.com" target="_blank" class="ans1">
+				 jk asks center to undertake jhelum flood control study <sub> read more </sub></a>
+			</li>
+		</ul>
+	</div>
+
+
+
+</body>
+
+</html>

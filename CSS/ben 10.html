@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			outline: none;
+		}
+
+		div {
+			width: 50px;
+			height: 50px;
+			padding: 10px 10px;
+			position: relative;
+			display: block;
+			margin: 200px 600px;
+			border: none;
+			overflow: visible;
+		}
+
+		li {
+			position: absolute;
+			list-style: none;
+			display: block;
+			width: 30px;
+			height: 30px;
+			border: 3px solid transparent;
+			border-radius: 50%;
+			border-top-color: dodgerblue;
+			border-bottom-color: dodgerblue;
+			animation-name: move;
+			animation-duration: .5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite
+		}
+
+		span {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			/*
+			10 for outer padding padding
+			and remaining will be 30-10=20 and then 20/2=10 ,ie more 10
+			total 10+10 = 20px
+			*/
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 3px solid #555;
+		}
+
+		@keyframes move {
+			from {
+				transform: rotateZ(0deg)
+			}
+			to {
+				transform: rotateZ(360deg);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>
+
+	<div>
+		<li></li>
+		<span></span>
+	</div>
+</body>
+	
+</div>
+</html>

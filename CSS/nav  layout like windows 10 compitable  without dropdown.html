@@ -1,0 +1,193 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.home_img {
+			padding-top: 100px;
+			width: 75%;
+			display: block;
+			margin: auto;
+			margin-bottom: 1200px;
+			cursor: pointer;
+		}
+		
+		.big_wrapper {
+			display: block;
+			width: 100%;
+			border: none;
+			box-shadow: 0 4px 6px #eee;
+			position: fixed;
+			background: white;
+		}
+		
+		.top_line,
+		.bottom_line {
+			display: block;
+			border: none;
+		}
+		
+		.inside_top_line,
+		.inside_bottom_line {
+			display: block;
+			width: 1200px;
+			margin: auto;
+			border: none;
+			overflow: hidden;
+		}
+		
+		.top_line {
+			background-color: #0A99DB;
+		}
+		
+		.bottom_line {
+			overflow: hidden;
+		}
+		
+		.inside_top_line {
+			height: auto;
+		}
+		
+		.inside_top_line a {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			color: #9a9a9a;
+			color: white;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+			padding-right: 15px;
+			text-transform: capitalize;
+			font: bold 11px sans-serif;
+			border: none;
+			vertical-align: middle;
+			transition: all .2s ease-out;
+		}
+		
+		.inside_top_line a::before {
+			content: '\303A';
+			position: absolute;
+			left: 0;
+			transition: all .5s ease-out;
+		}
+		
+		.inside_top_line a:hover {
+			text-decoration: underline;
+		}
+		
+		.inside_top_line a:hover::before {
+			animation-name: spin;
+			animation-duration: .6s;
+			transition-timing-function: ease-in-out;
+		}
+		
+		@keyframes spin {
+			from {
+				transform: rotateZ(0deg);
+			}
+			to {
+				transform: rotateZ(360deg);
+			}
+		}
+		
+		.anchor_holder {
+			overflow: auto;
+			float: right;
+			border: none;
+			padding-right: 6px;
+		}
+		
+		.anchor_holder a {
+			float: left;
+		}
+		
+		.logo_holder {
+			display: inline-block;
+			border: none;
+		}
+		
+		.logo_holder img {
+			border: none;
+		}
+		
+		.main_links_holder {
+			display: inline-block;
+			float: right;
+			border: none;
+		}
+		
+		.main_links_holder .main_links {
+			display: inline-block;
+			position: relative;
+			float: left;
+			text-decoration: none;
+			color: #9a9a9a;
+			font: bold 11px sans-serif;
+			text-transform: uppercase;
+			padding: 25px 30px;
+			transition: background .2s ease-in;
+		}
+		
+		.main_links_holder .main_links::before {
+			content: '\303A';
+			border: none;
+			margin-right: 9px;
+		}
+		
+		.active {
+			background-color: #f9f9f9;
+			border-right: 1px dotted #eee;
+			border-left: 1px dotted #eee;
+		}
+		
+		.main_links_holder .main_links:not(.active):hover {
+			background-color: #f9f9f9;
+		}
+
+	</style>
+</head>
+
+<body>
+ <div id="load_screen"><img src="../pictures/loader.gif" id="loading"/> </div>	
+
+	<div class="big_wrapper">
+		<div class="top_line">
+			<div class="inside_top_line">
+				<div class="anchor_holder">
+					<a href="#"> subscribe</a>
+					<a href="#"> downloads</a>
+					<a href="#"> sign up</a>
+					<a href="#"> log in</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="bottom_line">
+			<div class="inside_bottom_line">
+				<a href="#" class="logo_holder">
+					<img src="images/windows%20ten%20logo.png">
+				</a>
+				<div class="main_links_holder">
+					<a href="#" class="main_links">hacks</a>
+					<a href="#" class="main_links">news</a>
+					<a href="#" class="main_links">gadgets</a>
+					<a href="#" class="main_links active">social media</a>
+					<a href="#" class="main_links">games</a>
+					<a href="#" class="main_links">softwares</a>
+					<a href="#" class="main_links">on demand</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="images/crew.jpg" class="home_img"></img>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script type="text/javascript">
+		  function clr()
+		  {
+		  	if(document.getElementById("t1").value==' search for keyword')
+		  	{
+		  		document.getElementById("t1").value="";
+		  	}
+		  	else
+		  	return;
+		  }
+		  function chk()
+		  {
+		  	if(document.getElementById("t1").value=='')
+		  		document.getElementById("t1").value=" search for keyword";
+		  	else
+		  		return;
+		  }
+
+		</script>
+</head>
+  
+<body>
+<hr color="red"\>
+&nbsp;&nbsp;&nbsp;&nbsp;
+		
+      <input type="text" id="t1" value=" search for keyword" onfocus="clr();" onblur="chk();">
+      &nbsp;&nbsp;
+      <input type="text" placeholder="search and hit enter"></input>
+      <input type="button" value="submit" ></input>      	
+</body>
+</html>
