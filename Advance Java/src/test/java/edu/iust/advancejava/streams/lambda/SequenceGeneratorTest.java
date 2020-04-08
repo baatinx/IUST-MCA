@@ -42,4 +42,32 @@ class SequenceGeneratorTest {
                 new Integer[] {2, 4});
     }
 
+
+    @Test
+    void usingGenericSeriesWithLogic() {
+        // constant step
+        assertArrayEquals(
+                genericSeriesWithLogic(1, (seed) -> seed > 5 ? null : seed + 1).toArray(),
+                new Integer[]{1, 2, 3, 4, 5, 6}
+        );
+
+        //variable step
+        assertArrayEquals(
+                genericSeriesWithLogic(2, (seed) -> seed > 100 ? null : seed * seed).toArray(),
+                new Integer[]{2, 4, 16, 256}
+        );
+
+        assertArrayEquals(
+                genericSeriesWithLogic("A", new Generator<String>() {
+                    @Override
+                    public String nextValue(String seed) {
+                        if (seed.equals("E"))
+                            return null;
+                        else
+                         return  Character.toString((seed.charAt(0) + 1 ) );
+                    }
+                }).toArray(),
+                new String[] {"A", "B", "C", "D", "E"}
+        );
+    }
 }
