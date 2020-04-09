@@ -3,6 +3,7 @@ import static edu.iust.advancejava.streams.lambda.SequenceAggregator.*;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Array;
+import java.nio.charset.IllegalCharsetNameException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -78,8 +79,21 @@ class SequenceAggregatorTest {
     void testFilter() {
         assertArrayEquals(new String[] {"Afshaan", "Nuzhat", "Shayesta"}, filter(Arrays.asList("Iqra", "Zakir", "Afshaan", "Nuzhat", "Basit", "Nasir","Shayesta"),
                 s-> s.length() > 5).toArray());
-
-
     }
 
+    @Test
+    void TestMapUsingReduce(){
+        assertArrayEquals(new Integer[] {2, 4, 6, 9}, mapUsingReduce(Arrays.asList(1, 3, 5, 8), x-> x+1).toArray() );
+    }
+
+    @Test
+    void testFilterUsingReduce(){
+        assertArrayEquals(new Integer[] {2, 4, 6, 8, 10},filterUsingReduce(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), item-> item % 2 == 0).toArray());
+    }
+
+
+    @Test
+    void testTakeWhile() {
+        assertArrayEquals(new Integer[] {1, 2, 3}, takeWhile(Arrays.asList(1, 2, 3, -4, -1, 3, -2, 5, 0), item -> item > 0).toArray());
+    }
 }

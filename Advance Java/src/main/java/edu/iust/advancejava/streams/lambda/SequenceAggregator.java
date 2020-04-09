@@ -55,5 +55,33 @@ public class SequenceAggregator {
         return output;
     }
 
+    public static<U,T> Collection<U> mapUsingReduce(Collection<T> list, Mapper<U,T> mapper){
+        return reduce(new ArrayList<U>(), (result, item)->{
+            result.add(mapper.map(item));
+            return result;
+        },list);
+    }
+
+    public static<T> Collection<T> filterUsingReduce(Collection<T> list, Predicate<T> filter ){
+        return reduce(new ArrayList<T>(), (result, item) -> {
+            if(filter.test(item))
+                result.add(item);
+            return result;
+        }, list );
+    }
+
+    public static<T> Collection<T> takeWhile(Collection<T> list, Predicate<T> check){
+        Collection<T> output = new ArrayList<>();
+        for(T item : list)
+            if(check.test(item))
+                output.add(item);
+            else
+                break;
+
+            return output;
+    }
+
+  
+
 
 }
