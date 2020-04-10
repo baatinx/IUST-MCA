@@ -96,4 +96,25 @@ class SequenceAggregatorTest {
     void testTakeWhile() {
         assertArrayEquals(new Integer[] {1, 2, 3}, takeWhile(Arrays.asList(1, 2, 3, -4, -1, 3, -2, 5, 0), item -> item > 0).toArray());
     }
+
+    @Test
+    void testFlatMap() {
+        assertArrayEquals(new Integer[] {1, 2, 3, 4, 5, 6}, flatMap(Arrays.asList(new Integer[] {1, 2}, new Integer[] {3, 4, 5}, new Integer[] {6}), Arrays::asList).toArray());
+
+        assertArrayEquals(new Integer[] {2, 4, 6, 3, 6, 9, 4, 8, 12}, flatMap(Arrays.asList(2, 3, 4), new Mapper<Collection<Integer>, Integer>() {
+            @Override
+            public Collection<Integer> map( Integer item) {
+                /*
+                 this time item is not a list, is just a single element,
+                 as we know the output for this is collection
+                 we have to generate the multiple of given number upto (item * 3)
+                 if item = 3, output should be 3, 6, 9
+                 we can generate this list via sequence generator with constant step
+                */
+
+                return SequenceGenerator.range(item, (item * 3) + 1, item);
+            }
+        }).toArray());
+
+    }
 }

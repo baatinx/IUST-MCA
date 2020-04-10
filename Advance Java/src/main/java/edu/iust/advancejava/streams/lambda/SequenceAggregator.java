@@ -81,7 +81,18 @@ public class SequenceAggregator {
             return output;
     }
 
-  
+    // flatMap is almost same as map function, the difference is this time it has to deal with collection of collections
+    // each element in the list is itself a list/array
+    // we have to just map a function that will add all the elements of a list into "output list" n-times
+    // we have to just slightly change the implementation of map()
+    public static<U,T> Collection<U> flatMap(Collection<T> list, Mapper<Collection<U>, T> flatMapper){
+        Collection<U> output = new ArrayList<>();
+
+        for(T items : list)
+            output.addAll(flatMapper.map(items));
+        return output;
+    }
+
 
 
 }
