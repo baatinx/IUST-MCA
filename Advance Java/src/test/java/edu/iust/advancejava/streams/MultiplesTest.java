@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static edu.iust.advancejava.streams.Multiples.*;
 import static  java.util.stream.Collectors.*;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,5 +35,43 @@ class MultiplesTest {
                 Integer.valueOf(50),
                 sumOfMultiplesOfN(Stream.of(3, 5, 30, 2, 10, 5), 5)
         );
+    }
+
+    @Test
+    void testFactorsViaInefficientWay() {
+        assertEquals(IntStream.of(1, 2, 5, 10).boxed().collect(toList()),
+                factorsViaInefficientWay(10).boxed().collect(toList()));
+
+    }
+
+    @Test
+    void testFactors() {
+        assertEquals(IntStream.of(1, 2, 5, 10).boxed().collect(toList()),
+                factors(10).boxed().collect(toList()));
+
+    }
+
+    @Test
+    void testIsPrime() {
+        assertTrue(isPrime(3));
+        assertFalse(isPrime(10));
+        assertFalse(isPrime(0));
+        assertFalse(isPrime(1));
+    }
+
+    @Test
+    void testFinitePrimeSeries() {
+        assertEquals(
+                IntStream.of(2, 3, 5, 7).boxed().collect(toSet()),
+                finitePrimeSeries(10).boxed().collect(toSet())
+        );
+
+    }
+
+    @Test
+    void testInfinitePrimeSeries() {
+        assertEquals(
+                IntStream.of(2, 3, 5).boxed().collect(toSet()),
+                infinitePrimeSeries().limit(3).boxed().collect(toSet()));
     }
 }
