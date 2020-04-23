@@ -1,7 +1,7 @@
-package edu.iust.advancejava.java8features;
+package edu.iust.advancejava.java8newfeatures.interfacechanges;
 
 public interface Vehicle {
-    // this is not functional interface
+    // This is not a Functional Interface
 
     //Abstract Methods
     String changeGear();
@@ -15,8 +15,8 @@ public interface Vehicle {
     // then what will remain the difference between "Abstract Classes" & "Java 8 Interfaces with Extension Methods"
 
     // we used to say,
-    // use Interface when we know implementation only
-    // use Abstract Classes when we know partial implementation
+    // use Interface, when we know implementation only
+    // use Abstract Classes, when we know partial implementation
 
     // pending - ????
 }
