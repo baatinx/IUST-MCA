@@ -1,8 +1,10 @@
 package edu.iust.advancejava.streams.problems;
 
 import org.junit.jupiter.api.Test;
+import static edu.iust.advancejava.streams.problems.CollectionProblem.*;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -51,7 +53,22 @@ class CollectionProblemTest {
         assertEquals(Arrays.asList("pendrive", "mouse", "speakers"), m.get(3));
     }
 
-    @Test
 
+    @Test
+    void testFrequencies() {
+        Stream<Integer> data = Stream.of(1, 1, 2, 2, 2, 4, 5, 5, 5, 9, 9, 10);
+        Map<Integer,Integer> expected = new HashMap<>();
+        expected.put(1, 2);
+        expected.put(2, 3);
+        expected.put(4, 1);
+        expected.put(5, 3);
+        expected.put(9, 2);
+        expected.put(10, 1);
+
+        assertEquals(
+                expected,
+                data.collect(frequencies())
+        );
+    }
 
 }
