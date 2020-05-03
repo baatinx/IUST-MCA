@@ -71,4 +71,20 @@ class CollectionProblemTest {
         );
     }
 
+    @Test
+    void testGroupBy() {
+        Stream<String> stream = Stream.of("Basit", "Ziya", "Sana", "Zakir", "Iqra", "Mudasir", "Shakoor", "Nuzhat");
+        Map<Integer, List<String>> expected = new HashMap<>();
+        expected.put(4, Arrays.asList("Ziya", "Sana", "Iqra"));
+        expected.put(5, Arrays.asList("Basit", "Zakir"));
+        expected.put(6, Arrays.asList("Nuzhat"));
+        expected.put(7, Arrays.asList("Mudasir", "Shakoor"));
+
+        assertEquals(
+                expected,
+                stream.collect(groupBy(String::length))
+        );
+
+
+    }
 }
