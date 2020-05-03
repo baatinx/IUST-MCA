@@ -33,10 +33,17 @@ public class CollectionProblem {
                         //acc.put(x, count +1);
                     },
                     //combiner
-                    (s1, s2)-> {
+                    (xs, ys) -> {
+                        xs.forEach((key, value) -> ys.merge(key, value, (xValue, yValue) -> xValue + yValue));
+                        return ys;
+                    }
+
+                    /*                    (s1, s2)-> {
                         s2.forEach((key, value) -> s1.merge(key, value, (v1, v2)-> v1 + v2) );
                         return s1;
                     }
+                    */
+
 
                     // how to implement finisher(), Characteristics here
 
