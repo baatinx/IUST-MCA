@@ -67,7 +67,6 @@ public class HelloJDBC {
             try(ResultSet rs = statement.getGeneratedKeys()) {
                     return rs.next() ? Optional.of(rs.getInt(1)) : Optional.empty();
             }
-
         }
     }
 
