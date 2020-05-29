@@ -35,9 +35,10 @@ public class VehicleDAO {
             statement.setInt(2, vehicle.getNumberOfWheels());
             statement.setDate(3, java.sql.Date.valueOf(vehicle.getDateOfRegistration()));
             statement.setInt(4, vehicle.getId());
-            statement.execute();vehicle.getDateOfRegistration();
+            statement.execute();
         }
     }
+
     public void delete(Vehicle vehicle) throws SQLException{
         String sql = "delete from vehicle where id = ?;";
         try(PreparedStatement statement = conn.prepareStatement(sql)){
@@ -47,14 +48,14 @@ public class VehicleDAO {
     }
 
     public Optional<Vehicle> getById(int id) throws SQLException{
-        String sql = "select * from vehicle where id = ?;";
+        String sql = "select id, registration_number, no_of_wheels, date_of_registration from vehicle where id = ?;";
         try(PreparedStatement statement = conn.prepareStatement(sql)){
             statement.setInt(1, id);
             try(ResultSet rs = statement.executeQuery()) {
                 return !(rs.next()) ? Optional.empty() :
                         Optional.of(new Vehicle(
                                 rs.getString("registration_number"),
-                                rs.getInt("number_of_wheels"),
+                                rs.getInt("no_of_wheels"),
                                 rs.getDate("date_of_registration").toLocalDate()));
             }
         }
