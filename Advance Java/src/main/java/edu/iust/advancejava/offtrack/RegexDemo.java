@@ -1,4 +1,4 @@
-package edu.iust.advancejava.jdbc.simpleorm;
+package edu.iust.advancejava.offtrack;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +23,11 @@ public class RegexDemo {
         System.out.println(Pattern.matches("\\d", "1"));
         System.out.println(Pattern.matches("\\D", "n"));
         System.out.println(Pattern.matches("\\D", "@"));
-        System.out.println(Pattern.matches("(get|is)([A-Z].*)", "getName"));
+        System.out.println(Pattern.matches("(get|is)([A-Z].*)", "getFirstName"));
+            String s = "Hello";
+            String ans =  s == null ? null :
+                    Character.toLowerCase(s.charAt(0)) + s.substring(1);
+
+        System.out.println(ans);
     }
 }

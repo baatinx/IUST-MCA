@@ -11,7 +11,8 @@ public class ReflectionDemoTest {
         // Error - showMePassword has private access
 
        Class cls = reflectionDemo.getClass();
-       System.out.println("The name of the class is: " + cls.getName());
+        System.out.println("The name of the class is: " + cls.getName());
+        System.out.println("The name of the class is: " + cls.getSimpleName());
 
        Constructor constructor = cls.getConstructor();
        System.out.println("\nThe name of the constructor is: " + constructor.getName());
@@ -50,8 +51,7 @@ public class ReflectionDemoTest {
        //methodCallToShowMePassword.invoke(reflectionDemo);
        methodCallToShowMePassword.invoke(reflectionDemo, null);
 
-       // We can invoke an method through reflection if we know its name and parameter types./
+       // We can invoke an method through reflection if we know its name and parameter types.
        // If the method of the class doesn't accepts any parameter then null is passed as argument
-
     }
 }
