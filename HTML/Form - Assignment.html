@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- On W3School Try it - https://www.w3schools.com/code/tryit.asp?filename=GGM0PT02ZHP0 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        legend{
+            font: bold 20px sans-serif;
+            color:limegreen;
+            text-transform: uppercase;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="email"]{
+            width: 250px;
+            height: 40px;
+            margin: auto;
+            padding: auto;
+            font: normal 14px sans-serif;
+        }
+
+        input[type="text"]:invalid,
+        input[type="date"]:invalid,
+        input[type="number"]:invalid,
+        input[type="email"]:invalid,
+        ::placeholder{
+            color: tomato!important;
+        }
+
+        input[type="text"]:valid,
+        input[type="date"]:valid,
+        input[type="number"]:valid,
+        input[type="number"]:valid,
+        select{
+            color: limegreen!important;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        label{
+            font: bold 18px open-sans;
+        }
+        select{
+            width: 150px;
+            height: 40px;
+            margin: auto;
+            padding: auto;
+        }
+
+        button{
+            padding: 20px 30px;
+            margin-right: 20px;
+            background-color:royalblue;
+            color: white;
+            border:5px solid royalblue;
+            font: normal 18px sans-serif;
+            text-transform: uppercase;
+            transition: all .4s ease-in-out;
+        }
+        button:hover{
+            background-color: white;
+            border-color:royalblue;
+            color: royalblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
+        <fieldset>
+        <legend> <b>Assignment for Web Tec.</b></legend>
+        
+        <label for="name">Name</label><br /> 
+        <input name="name" type="text" required minlength="5" placeholder=" Enter your Name ... " />
+        
+        <br /> 
+        <br />
+        
+        <label for="Father">Father's Name</label><br /> 
+        <input name="Father" type="text" required minlength="5" placeholder=" Enter your Father's Name ... "/>
+        
+        <br /> 
+        <br />
+
+        <label for="dob">D.O.B</label><br /> 
+        <input name="dob" type="date" required  />
+        
+        <br /> 
+        <br />
+        <label for="cno">Contact Number</label><br /> 
+        <input name="cno" type="number" min="999999999" required placeholder=" Enter your 10 digit contact number ... "/>
+        
+        <br /> 
+        <br />
+        <label for="gender">Gender</label><br /> 
+        <input name="gender" type="radio" value="Male" checked /><span>Male</span>
+        <input name="gender" type="radio" value="Femal"/><span>Female</span>
+        
+        <br /> 
+        <br />
+        <label for="email">E-mail ID</label><br /> 
+        <input name="email" type="email" required placeholder=" Enter your Email Address ... "/>
+        
+        
+        <br /> 
+        <br />
+        <label for="email">Highest Qualification</label><br /> 
+        <select>
+            <option selected="selected" value="1">10<sup>th</sup> </option>
+            <option  value="1">12<sup>th</sup> </option>
+            <option  value="2">Graduate</option>
+            <option  value="3">Masters </option>
+            <option  value="4">Masters and Above... </option>
+        </select>
+        
+        <br /> 
+        <br />
+        <label for="address">Permanent Address</label><br /> 
+        <input name="address" type="text" minlength="5" style="width: 300px;" required  placeholder=" Enter your Permanent Address ... " />
+
+        <br /> 
+        <br />  
+        <button type="submit" value="Submit">Submit Form</button>
+        <button type="reset" value="Reset">Reset Form</button>
+
+        </fieldset>
+    </form>
+    
+    
+</body>
+</html>
